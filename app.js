@@ -645,16 +645,15 @@
   // ---- Route modal ----
   const routeModal = document.createElement('div');
   routeModal.id = 'route-modal';
-  routeModal.hidden = true;
   routeModal.setAttribute('role', 'dialog');
   routeModal.setAttribute('aria-modal', 'true');
   routeModal.setAttribute('aria-label', 'Suggested route');
   document.body.appendChild(routeModal);
 
   routeModal.addEventListener('click', e => { if (e.target === routeModal) closeRouteModal(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !routeModal.hidden) closeRouteModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && routeModal.classList.contains('is-open')) closeRouteModal(); });
 
-  function closeRouteModal() { routeModal.hidden = true; document.body.style.overflow = ''; }
+  function closeRouteModal() { routeModal.classList.remove('is-open'); document.body.style.overflow = ''; }
 
   // ---- Haversine distance in miles ----
   function haversineMiles(lat1, lng1, lat2, lng2) {
@@ -785,7 +784,7 @@
       closeRouteModal();
     });
 
-    routeModal.hidden = false;
+    routeModal.classList.add('is-open');
     document.body.style.overflow = 'hidden';
   }
 

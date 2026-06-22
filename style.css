@@ -215,8 +215,9 @@ a{color:inherit}
 .itin-clear:hover{color:var(--ink)}
 
 /* ---------- Route suggester modal ---------- */
-#route-modal{position:fixed;inset:0;z-index:200;background:rgba(43,42,38,.55);backdrop-filter:blur(4px);display:flex;align-items:flex-end;justify-content:center;padding:0}
-@media(min-width:600px){#route-modal{align-items:center;padding:1.5rem}}
+#route-modal{position:fixed;inset:0;z-index:200;background:rgba(43,42,38,.55);backdrop-filter:blur(4px);display:none;align-items:flex-end;justify-content:center;padding:0}
+#route-modal.is-open{display:flex}
+@media(min-width:600px){#route-modal.is-open{align-items:center;padding:1.5rem}}
 .route-sheet{background:var(--card);border-radius:var(--r-card) var(--r-card) 0 0;width:100%;max-width:640px;max-height:92dvh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 -8px 40px rgba(43,42,38,.18)}
 @media(min-width:600px){.route-sheet{border-radius:var(--r-card);max-height:88dvh}}
 .route-sheet-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;padding:1.4rem 1.5rem 1rem;border-bottom:1px solid var(--line)}
