@@ -52,6 +52,9 @@
   // ---- State ----
   const state = { aesthetics:new Set(), mediums:new Set(), region:new Set(), days:new Set(), notable:false };
 
+  // ---- Itinerary (persists across runs) ----
+  const itinerary = new Map(); // name → gallery obj
+
   // ---- Render chip groups ----
   function renderChips(group, entries) {
     const box = document.querySelector(`.chips[data-group="${group}"]`);
@@ -533,6 +536,7 @@
     const hours = hoursLabel.length
       ? `<ul class="card-hours">${hoursLabel.map(h => `<li>${esc(h)}</li>`).join("")}</ul>`
       : `<p class="card-hours-none">Hours not listed — check venue website</p>`;
+    const inItin = itinerary.has(g.name);
     el.innerHTML = `
       <div class="card-top">
         <div><h4><a class="card-name-link" href="${galleryUrl}" target="_blank" rel="noopener noreferrer">${esc(g.name)}</a></h4></div>
@@ -546,7 +550,26 @@
       <details class="card-hours-details"${state.days.size ? " open" : ""}>
         <summary>UAW Hours</summary>
         ${hours}
-      </details>`;
+      </details>
+      <button class="itin-btn" aria-pressed="${inItin}" data-name="${esc(g.name)}">${inItin ? '✓ In itinerary' : '+ Add to itinerary'}</button>`;
+    if (inItin) el.classList.add('in-itinerary');
+
+    el.querySelector('.itin-btn').addEventListener('click', () => {
+      const btn = el.querySelector('.itin-btn');
+      if (itinerary.has(g.name)) {
+        itinerary.delete(g.name);
+        btn.setAttribute('aria-pressed', 'false');
+        btn.textContent = '+ Add to itinerary';
+        el.classList.remove('in-itinerary');
+      } else {
+        itinerary.set(g.name, g);
+        btn.setAttribute('aria-pressed', 'true');
+        btn.textContent = '✓ In itinerary';
+        el.classList.add('in-itinerary');
+      }
+      updateItineraryTray();
+    });
+
     return el;
   }
 
@@ -585,4 +608,104 @@
     setTimeout(() => resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 150);
   }
   restoreFromUrl();
+
+  // ---- Itinerary tray ----
+  const tray = document.createElement('div');
+  tray.id = 'itin-tray';
+  tray.hidden = true;
+  tray.innerHTML = `
+    <span id="itin-count"></span>
+    <div class="itin-actions">
+      <a id="itin-maps-btn" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Google Maps
+      </a>
+      <button id="itin-pdf-btn" class="btn btn-primary">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Save PDF
+      </button>
+      <button id="itin-clear-btn" class="itin-clear">Clear</button>
+    </div>`;
+  document.body.appendChild(tray);
+
+  document.getElementById('itin-pdf-btn').addEventListener('click', printItinerary);
+  document.getElementById('itin-clear-btn').addEventListener('click', () => {
+    itinerary.clear();
+    document.querySelectorAll('.itin-btn').forEach(b => {
+      b.setAttribute('aria-pressed', 'false');
+      b.textContent = '+ Add to itinerary';
+    });
+    document.querySelectorAll('.card.in-itinerary').forEach(c => c.classList.remove('in-itinerary'));
+    updateItineraryTray();
+  });
+
+  function updateItineraryTray() {
+    const count = itinerary.size;
+    tray.hidden = count === 0;
+    document.getElementById('itin-count').textContent =
+      count === 1 ? '1 gallery in your itinerary' : `${count} galleries in your itinerary`;
+
+    const stops = [...itinerary.values()]
+      .filter(g => !VAGUE_LOCS.has(g.location))
+      .slice(0, 9)
+      .map(g => encodeURIComponent(g.name + ', ' + g.location));
+    const mapsBtn = document.getElementById('itin-maps-btn');
+    mapsBtn.href = stops.length ? 'https://www.google.com/maps/dir/' + stops.join('/') : '#';
+    mapsBtn.style.display = stops.length ? '' : 'none';
+  }
+
+  function printItinerary() {
+    const galleries = [...itinerary.values()];
+    const dayLabel = state.days.size ? [...state.days].join(' & ') : null;
+
+    const stops = galleries.map((g, i) => {
+      const hrs = hoursForDays(g);
+      const showHours = hrs.length ? hrs : (g.hours || []);
+      const hoursHtml = showHours.length
+        ? showHours.map(h => `<li>${h}</li>`).join('')
+        : '<li>Check venue website for hours</li>';
+      const url = g.website || `https://www.google.com/search?q=${encodeURIComponent(g.name + ' ' + g.location)}`;
+      return `<div class="stop">
+        <div class="stop-num">${i + 1}</div>
+        <div class="stop-body">
+          <h2><a href="${url}">${g.name}</a></h2>
+          <p class="loc">${g.location}</p>
+          ${g.show ? `<p class="show">${g.show}</p>` : ''}
+          <ul class="hours">${hoursHtml}</ul>
+        </div>
+      </div>`;
+    }).join('');
+
+    const mapsStops = galleries.filter(g => !VAGUE_LOCS.has(g.location)).slice(0, 9)
+      .map(g => encodeURIComponent(g.name + ', ' + g.location));
+    const mapsUrl = mapsStops.length ? 'https://www.google.com/maps/dir/' + mapsStops.join('/') : null;
+
+    const win = window.open('', '_blank');
+    win.document.write(`<!DOCTYPE html><html><head><meta charset="utf-8">
+<title>My UAW 2026 Itinerary</title>
+<style>
+  body{font-family:Georgia,serif;max-width:680px;margin:2rem auto;padding:1rem 2rem;color:#2b2a26}
+  h1{font-size:2rem;margin-bottom:.3rem}
+  .subtitle{color:#5b594f;margin-bottom:1.5rem;font-size:.9rem;font-family:sans-serif}
+  .maps-link{display:inline-block;margin-bottom:2rem;background:#5e6b54;color:#fff;padding:.5rem 1.2rem;border-radius:999px;text-decoration:none;font-family:sans-serif;font-size:.82rem;font-weight:600}
+  .stop{display:flex;gap:1.2rem;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid #ddd6c5}
+  .stop-num{font-size:1.8rem;font-weight:bold;color:#5e6b54;min-width:2rem;line-height:1;padding-top:.15rem;font-family:sans-serif}
+  .stop-body h2{font-size:1.2rem;margin-bottom:.2rem}
+  .stop-body h2 a{color:inherit;text-decoration:none}
+  .loc{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:#5e6b54;font-weight:600;margin-bottom:.3rem;font-family:sans-serif}
+  .show{font-style:italic;color:#5b594f;font-size:.88rem;margin-bottom:.4rem}
+  .hours{list-style:none;padding:0;font-size:.82rem;color:#5b594f;font-family:sans-serif}
+  .hours li{margin-bottom:.1rem}
+  .footer{font-size:.75rem;color:#908d80;font-family:sans-serif;margin-top:3rem;border-top:1px solid #ddd6c5;padding-top:1rem}
+  @media print{.maps-link{display:none}}
+</style></head><body>
+<h1>My UAW 2026 Itinerary</h1>
+<p class="subtitle">${dayLabel ? dayLabel + ' · ' : ''}${galleries.length} ${galleries.length === 1 ? 'gallery' : 'galleries'} · Upstate Art Weekend</p>
+${mapsUrl ? `<a class="maps-link" href="${mapsUrl}" target="_blank">Open in Google Maps ↗</a>` : ''}
+${stops}
+<p class="footer">Generated by the UAW 2026 Gallery Matcher · uaw2026.newtothewallfoundation.com</p>
+</body></html>`);
+    win.document.close();
+    setTimeout(() => win.print(), 400);
+  }
 })();
