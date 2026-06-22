@@ -480,6 +480,20 @@
       actionsEl.appendChild(myMapsBtn);
     }
     myMapsBtn.onclick = () => downloadMyMapsCsv(t1cap, t2cap, t3cap);
+
+    // "Suggest a route" button — always visible when there are results
+    let routeBtn = document.getElementById("route-btn");
+    if (!routeBtn) {
+      routeBtn = document.createElement("button");
+      routeBtn.id = "route-btn";
+      routeBtn.type = "button";
+      routeBtn.className = "btn btn-ghost";
+      routeBtn.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg> Suggest a route`;
+      // insert before the share button so it's first in the bar
+      actionsEl.insertBefore(routeBtn, actionsEl.firstChild);
+    }
+    const routePool = [...t1cap, ...t2cap, ...t3cap];
+    routeBtn.onclick = () => showRouteModal(suggestRoute(routePool));
   }
 
   function renderSummary(total, n1, n2, n3) {
@@ -627,6 +641,153 @@
       <button id="itin-clear-btn" class="itin-clear">Clear</button>
     </div>`;
   document.body.appendChild(tray);
+
+  // ---- Route modal ----
+  const routeModal = document.createElement('div');
+  routeModal.id = 'route-modal';
+  routeModal.hidden = true;
+  routeModal.setAttribute('role', 'dialog');
+  routeModal.setAttribute('aria-modal', 'true');
+  routeModal.setAttribute('aria-label', 'Suggested route');
+  document.body.appendChild(routeModal);
+
+  routeModal.addEventListener('click', e => { if (e.target === routeModal) closeRouteModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !routeModal.hidden) closeRouteModal(); });
+
+  function closeRouteModal() { routeModal.hidden = true; document.body.style.overflow = ''; }
+
+  // ---- Haversine distance in miles ----
+  function haversineMiles(lat1, lng1, lat2, lng2) {
+    const R = 3958.8;
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLng = (lng2 - lng1) * Math.PI / 180;
+    const a = Math.sin(dLat / 2) ** 2 +
+      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(dLng / 2) ** 2;
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  }
+
+  // Parse earliest opening hour (0–23) for selected day(s); returns 12 as default
+  function parseOpenHour(g) {
+    const days = state.days.size ? [...state.days] : null;
+    const hours = g.hours || [];
+    let earliest = 99;
+    hours.forEach(h => {
+      if (days && !days.some(d => h.startsWith(d))) return;
+      const m = h.match(/(\d+)(?::\d+)?\s*(am|pm)/i);
+      if (m) {
+        let hr = parseInt(m[1], 10);
+        const ampm = m[2].toLowerCase();
+        if (ampm === 'pm' && hr !== 12) hr += 12;
+        if (ampm === 'am' && hr === 12) hr = 0;
+        earliest = Math.min(earliest, hr);
+      }
+    });
+    return earliest === 99 ? 12 : earliest;
+  }
+
+  // Nearest-neighbor route, penalising long waits for late-opening galleries
+  function suggestRoute(allItems) {
+    const withCoords = allItems.filter(x => x.g.lat && x.g.lng);
+    if (!withCoords.length) return [];
+    const annotated = withCoords.map(x => ({ ...x, openHour: parseOpenHour(x.g) }));
+    // Seed: earliest opener; break ties northward (higher lat = further north)
+    annotated.sort((a, b) => a.openHour - b.openHour || b.g.lat - a.g.lat);
+    const remaining = [...annotated];
+    const route = [remaining.shift()];
+    while (remaining.length) {
+      const last = route[route.length - 1];
+      const estNow = last.openHour + (route.length - 1) * 0.75; // ~45 min per stop
+      let bestIdx = 0, bestCost = Infinity;
+      remaining.forEach((x, i) => {
+        const dist = haversineMiles(last.g.lat, last.g.lng, x.g.lat, x.g.lng);
+        const arriveAt = estNow + 0.75 + dist / 35; // ~35 mph rural average
+        const wait = Math.max(0, x.openHour - arriveAt);
+        const cost = dist + wait * 12; // 1 hr wait ≈ 12 extra miles in penalty
+        if (cost < bestCost) { bestCost = cost; bestIdx = i; }
+      });
+      route.push(remaining.splice(bestIdx, 1)[0]);
+    }
+    return route;
+  }
+
+  function showRouteModal(route) {
+    if (!route.length) {
+      alert('No galleries with location data in your current results.');
+      return;
+    }
+    const dayLabel = state.days.size ? [...state.days].join(' & ') : null;
+    const stops = route.map((x, i) => {
+      const g = x.g;
+      const hrs = hoursForDays(g);
+      const showHours = hrs.length ? hrs : (g.hours || []);
+      const hoursHtml = showHours.length
+        ? showHours.map(h => `<span class="rs-hour">${esc(h)}</span>`).join('')
+        : `<span class="rs-hour rs-hour--none">Check venue website</span>`;
+      let driveEl = '';
+      if (i < route.length - 1) {
+        const next = route[i + 1].g;
+        if (g.lat && g.lng && next.lat && next.lng) {
+          const miles = haversineMiles(g.lat, g.lng, next.lat, next.lng);
+          const mins = Math.round(miles / 35 * 60);
+          driveEl = `<div class="rs-drive">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            ${miles < 1 ? 'Under 1 mi' : miles.toFixed(1) + ' mi'} · ~${mins < 5 ? '&lt;5' : mins} min to next stop
+          </div>`;
+        }
+      }
+      const url = g.website || `https://www.google.com/search?q=${encodeURIComponent(g.name + ' ' + g.location)}`;
+      return `<div class="rs-stop" data-name="${esc(g.name)}">
+        <div class="rs-num">${i + 1}</div>
+        <div class="rs-body">
+          <div class="rs-name"><a href="${url}" target="_blank" rel="noopener noreferrer">${esc(g.name)}</a>${g.notable ? ' <span class="rs-star">★</span>' : ''}</div>
+          <div class="rs-addr">${esc(g.address || g.location)}</div>
+          <div class="rs-hours">${hoursHtml}</div>
+        </div>
+      </div>${driveEl}`;
+    }).join('');
+
+    const mapsStops = route
+      .filter(x => x.g.lat && x.g.lng && !VAGUE_LOCS.has(x.g.location))
+      .slice(0, 9)
+      .map(x => encodeURIComponent(x.g.address || (x.g.name + ', ' + x.g.location)));
+    const mapsUrl = mapsStops.length ? 'https://www.google.com/maps/dir/' + mapsStops.join('/') : null;
+
+    routeModal.innerHTML = `
+      <div class="route-sheet">
+        <div class="route-sheet-head">
+          <div>
+            <h2 class="route-title">Suggested route</h2>
+            <p class="route-sub">${route.length} stops${dayLabel ? ' · ' + dayLabel : ''} · ordered by proximity &amp; hours</p>
+          </div>
+          <button class="route-close" aria-label="Close">&times;</button>
+        </div>
+        <div class="route-sheet-actions">
+          ${mapsUrl ? `<a class="btn btn-ghost" href="${mapsUrl}" target="_blank" rel="noopener noreferrer">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Open in Maps
+          </a>` : ''}
+          <button class="btn btn-primary route-add-all">+ Add all to itinerary</button>
+        </div>
+        <div class="route-stops">${stops}</div>
+      </div>`;
+
+    routeModal.querySelector('.route-close').addEventListener('click', closeRouteModal);
+    routeModal.querySelector('.route-add-all').addEventListener('click', () => {
+      route.forEach(x => itinerary.set(x.g.name, x.g));
+      document.querySelectorAll('.itin-btn').forEach(btn => {
+        if (itinerary.has(btn.dataset.name)) {
+          btn.setAttribute('aria-pressed', 'true');
+          btn.textContent = '✓ In itinerary';
+          btn.closest('.card')?.classList.add('in-itinerary');
+        }
+      });
+      updateItineraryTray();
+      closeRouteModal();
+    });
+
+    routeModal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
 
   document.getElementById('itin-pdf-btn').addEventListener('click', printItinerary);
   document.getElementById('itin-clear-btn').addEventListener('click', () => {
