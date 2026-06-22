@@ -212,6 +212,8 @@
   // ---- Google Maps embed ----
   let _gmap = null;
   let _infoWindow = null;
+  let _markers = [];
+  let _routePolyline = null;
   // Callback registered as Maps JS API loads async
   window._onMapsReady = function() { window._mapsReady = true; };
 
@@ -239,9 +241,12 @@
     mapSection.hidden = false;
     mapEl.innerHTML = "";
 
-    // Destroy old map
+    // Destroy old map + clear route artifacts
+    _markers.forEach(m => m.setMap(null)); _markers = [];
+    if (_routePolyline) { _routePolyline.setMap(null); _routePolyline = null; }
     if (_gmap) { _gmap = null; }
     if (_infoWindow) { _infoWindow.close(); _infoWindow = null; }
+    clearRouteBar();
 
     const TIER_COLOR = { 1:'#5e6b54', 2:'#8a9a78', 3:'#b0ad9e' };
     const TIER_SCALE = { 1:11, 2:9, 3:7 };
@@ -277,6 +282,7 @@
           strokeWeight: 2
         }
       });
+      _markers.push(marker);
 
       const galleryUrl = g.website || `https://www.google.com/search?q=${encodeURIComponent(g.name + ' ' + g.location)}`;
       const content = `
@@ -294,6 +300,136 @@
     });
 
     _gmap.fitBounds(bounds, { top:40, right:40, bottom:40, left:40 });
+  }
+
+  // ---- Render suggested route on the existing map ----
+  function renderRouteOnMap(route) {
+    const mapSection = document.getElementById("map-section");
+    if (!route.length) {
+      alert('Add some galleries to your itinerary first, then suggest a route.');
+      return;
+    }
+    if (!_gmap || !window._mapsReady) {
+      alert('Map not ready — select a day and run your search first.');
+      return;
+    }
+
+    // Replace all existing markers with numbered route markers
+    _markers.forEach(m => m.setMap(null)); _markers = [];
+    if (_routePolyline) { _routePolyline.setMap(null); _routePolyline = null; }
+
+    const bounds = new google.maps.LatLngBounds();
+    const pathCoords = [];
+
+    route.forEach((x, i) => {
+      const g = x.g;
+      const pos = getCoords(g);
+      if (!pos) return;
+      bounds.extend(pos);
+      pathCoords.push(pos);
+
+      const marker = new google.maps.Marker({
+        position: pos,
+        map: _gmap,
+        title: g.name,
+        label: { text: String(i + 1), color: '#fff', fontWeight: '700', fontSize: '11px' },
+        icon: {
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 14,
+          fillColor: '#5e6b54',
+          fillOpacity: 1,
+          strokeColor: '#ffffff',
+          strokeWeight: 2.5
+        },
+        zIndex: 100 + route.length - i
+      });
+      _markers.push(marker);
+
+      const hrs = hoursForDays(g);
+      const showHours = hrs.length ? hrs : (g.hours || []);
+      const hoursHtml = showHours.map(h => `<li>${h}</li>`).join('') || '<li>Check venue website</li>';
+      const galleryUrl = g.website || `https://www.google.com/search?q=${encodeURIComponent(g.name + ' ' + g.location)}`;
+      const content = `
+        <div style="font-family:sans-serif;max-width:230px;padding:2px 4px">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#5e6b54;margin-bottom:3px">Stop ${i + 1}</div>
+          <div style="font-weight:600;font-size:14px;margin-bottom:2px">${g.name}</div>
+          <div style="font-size:11px;color:#666;margin-bottom:5px">${g.address || g.location}</div>
+          ${showHours.length ? `<ul style="font-size:11px;color:#444;margin:0 0 5px;padding-left:14px">${hoursHtml}</ul>` : ''}
+          <a href="${galleryUrl}" target="_blank" rel="noopener noreferrer" style="font-size:11px;color:#5e6b54;font-weight:600">Visit website ↗</a>
+        </div>`;
+      marker.addListener('click', () => { _infoWindow.setContent(content); _infoWindow.open(_gmap, marker); });
+    });
+
+    if (pathCoords.length > 1) {
+      _routePolyline = new google.maps.Polyline({
+        path: pathCoords,
+        geodesic: true,
+        strokeColor: '#5e6b54',
+        strokeOpacity: 0.65,
+        strokeWeight: 2.5,
+        map: _gmap,
+        icons: [{
+          icon: { path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW, scale: 3, fillColor: '#5e6b54', fillOpacity: 0.8, strokeColor: '#5e6b54', strokeWeight: 1 },
+          offset: '100%',
+          repeat: '90px'
+        }]
+      });
+    }
+
+    _gmap.fitBounds(bounds, { top: 50, right: 50, bottom: 50, left: 50 });
+    showRouteBar(route);
+    mapSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function clearRouteBar() {
+    const bar = document.getElementById('route-bar');
+    if (bar) bar.remove();
+  }
+
+  function showRouteBar(route) {
+    clearRouteBar();
+    const mapSection = document.getElementById('map-section');
+    const bar = document.createElement('div');
+    bar.id = 'route-bar';
+
+    const mapsStops = route
+      .filter(x => x.g.lat && x.g.lng && !VAGUE_LOCS.has(x.g.location))
+      .slice(0, 9)
+      .map(x => encodeURIComponent(x.g.address || (x.g.name + ', ' + x.g.location)));
+    const mapsUrl = mapsStops.length ? 'https://www.google.com/maps/dir/' + mapsStops.join('/') : null;
+    const dayLabel = state.days.size ? [...state.days].join(' & ') : null;
+
+    bar.innerHTML = `
+      <span class="route-bar-label">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Suggested route · ${route.length} stop${route.length === 1 ? '' : 's'}${dayLabel ? ' · ' + dayLabel : ''}
+      </span>
+      <div class="route-bar-actions">
+        <button class="btn btn-ghost route-bar-add-all">+ Add all to itinerary</button>
+        ${mapsUrl ? `<a class="btn btn-ghost" href="${mapsUrl}" target="_blank" rel="noopener noreferrer">Open in Maps</a>` : ''}
+        <button class="btn btn-ghost route-bar-pdf">Save PDF</button>
+        <button class="route-bar-clear itin-clear">Clear route</button>
+      </div>`;
+
+    bar.querySelector('.route-bar-add-all').addEventListener('click', () => {
+      route.forEach(x => itinerary.set(x.g.name, x.g));
+      document.querySelectorAll('.itin-btn').forEach(btn => {
+        if (itinerary.has(btn.dataset.name)) {
+          btn.setAttribute('aria-pressed', 'true');
+          btn.textContent = '✓ In itinerary';
+          btn.closest('.card')?.classList.add('in-itinerary');
+        }
+      });
+      updateItineraryTray();
+    });
+    bar.querySelector('.route-bar-pdf').addEventListener('click', () => printItinerary(route.map(x => x.g)));
+    bar.querySelector('.route-bar-clear').addEventListener('click', () => {
+      clearRouteBar();
+      _markers.forEach(m => m.setMap(null)); _markers = [];
+      if (_routePolyline) { _routePolyline.setMap(null); _routePolyline = null; }
+    });
+
+    mapSection.insertAdjacentElement('afterbegin', bar);
   }
 
   // ---- My Maps CSV export ----
@@ -493,7 +629,13 @@
       actionsEl.insertBefore(routeBtn, actionsEl.firstChild);
     }
     const routePool = [...t1cap, ...t2cap, ...t3cap];
-    routeBtn.onclick = () => showRouteModal(suggestRoute(routePool));
+    routeBtn.onclick = () => {
+      // Route the user's itinerary if they've selected galleries; otherwise route all results
+      const pool = itinerary.size >= 2
+        ? routePool.filter(x => itinerary.has(x.g.name))
+        : routePool;
+      renderRouteOnMap(suggestRoute(pool));
+    };
   }
 
   function renderSummary(total, n1, n2, n3) {
@@ -642,18 +784,6 @@
     </div>`;
   document.body.appendChild(tray);
 
-  // ---- Route modal ----
-  const routeModal = document.createElement('div');
-  routeModal.id = 'route-modal';
-  routeModal.setAttribute('role', 'dialog');
-  routeModal.setAttribute('aria-modal', 'true');
-  routeModal.setAttribute('aria-label', 'Suggested route');
-  document.body.appendChild(routeModal);
-
-  routeModal.addEventListener('click', e => { if (e.target === routeModal) closeRouteModal(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape' && routeModal.classList.contains('is-open')) closeRouteModal(); });
-
-  function closeRouteModal() { routeModal.classList.remove('is-open'); document.body.style.overflow = ''; }
 
   // ---- Haversine distance in miles ----
   function haversineMiles(lat1, lng1, lat2, lng2) {
@@ -709,86 +839,7 @@
     return route;
   }
 
-  function showRouteModal(route) {
-    if (!route.length) {
-      alert('No galleries with location data in your current results.');
-      return;
-    }
-    const dayLabel = state.days.size ? [...state.days].join(' & ') : null;
-    const stops = route.map((x, i) => {
-      const g = x.g;
-      const hrs = hoursForDays(g);
-      const showHours = hrs.length ? hrs : (g.hours || []);
-      const hoursHtml = showHours.length
-        ? showHours.map(h => `<span class="rs-hour">${esc(h)}</span>`).join('')
-        : `<span class="rs-hour rs-hour--none">Check venue website</span>`;
-      let driveEl = '';
-      if (i < route.length - 1) {
-        const next = route[i + 1].g;
-        if (g.lat && g.lng && next.lat && next.lng) {
-          const miles = haversineMiles(g.lat, g.lng, next.lat, next.lng);
-          const mins = Math.round(miles / 35 * 60);
-          driveEl = `<div class="rs-drive">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            ${miles < 1 ? 'Under 1 mi' : miles.toFixed(1) + ' mi'} · ~${mins < 5 ? '&lt;5' : mins} min to next stop
-          </div>`;
-        }
-      }
-      const url = g.website || `https://www.google.com/search?q=${encodeURIComponent(g.name + ' ' + g.location)}`;
-      return `<div class="rs-stop" data-name="${esc(g.name)}">
-        <div class="rs-num">${i + 1}</div>
-        <div class="rs-body">
-          <div class="rs-name"><a href="${url}" target="_blank" rel="noopener noreferrer">${esc(g.name)}</a>${g.notable ? ' <span class="rs-star">★</span>' : ''}</div>
-          <div class="rs-addr">${esc(g.address || g.location)}</div>
-          <div class="rs-hours">${hoursHtml}</div>
-        </div>
-      </div>${driveEl}`;
-    }).join('');
-
-    const mapsStops = route
-      .filter(x => x.g.lat && x.g.lng && !VAGUE_LOCS.has(x.g.location))
-      .slice(0, 9)
-      .map(x => encodeURIComponent(x.g.address || (x.g.name + ', ' + x.g.location)));
-    const mapsUrl = mapsStops.length ? 'https://www.google.com/maps/dir/' + mapsStops.join('/') : null;
-
-    routeModal.innerHTML = `
-      <div class="route-sheet">
-        <div class="route-sheet-head">
-          <div>
-            <h2 class="route-title">Suggested route</h2>
-            <p class="route-sub">${route.length} stops${dayLabel ? ' · ' + dayLabel : ''} · ordered by proximity &amp; hours</p>
-          </div>
-          <button class="route-close" aria-label="Close">&times;</button>
-        </div>
-        <div class="route-sheet-actions">
-          ${mapsUrl ? `<a class="btn btn-ghost" href="${mapsUrl}" target="_blank" rel="noopener noreferrer">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Open in Maps
-          </a>` : ''}
-          <button class="btn btn-primary route-add-all">+ Add all to itinerary</button>
-        </div>
-        <div class="route-stops">${stops}</div>
-      </div>`;
-
-    routeModal.querySelector('.route-close').addEventListener('click', closeRouteModal);
-    routeModal.querySelector('.route-add-all').addEventListener('click', () => {
-      route.forEach(x => itinerary.set(x.g.name, x.g));
-      document.querySelectorAll('.itin-btn').forEach(btn => {
-        if (itinerary.has(btn.dataset.name)) {
-          btn.setAttribute('aria-pressed', 'true');
-          btn.textContent = '✓ In itinerary';
-          btn.closest('.card')?.classList.add('in-itinerary');
-        }
-      });
-      updateItineraryTray();
-      closeRouteModal();
-    });
-
-    routeModal.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  document.getElementById('itin-pdf-btn').addEventListener('click', printItinerary);
+  document.getElementById('itin-pdf-btn').addEventListener('click', () => printItinerary());
   document.getElementById('itin-clear-btn').addEventListener('click', () => {
     itinerary.clear();
     document.querySelectorAll('.itin-btn').forEach(b => {
@@ -814,8 +865,8 @@
     mapsBtn.style.display = stops.length ? '' : 'none';
   }
 
-  function printItinerary() {
-    const galleries = [...itinerary.values()];
+  function printItinerary(galleriesArg) {
+    const galleries = galleriesArg || [...itinerary.values()];
     const dayLabel = state.days.size ? [...state.days].join(' & ') : null;
 
     const stops = galleries.map((g, i) => {
