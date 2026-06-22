@@ -137,6 +137,8 @@
 
 <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUP9bfQw5k-MpxNB3Nvqa48162MhBu6fU&callback=_onMapsReady&loading=async"></script>
 <script>
+  // Must be defined before the Maps API callback fires (which can beat app.js loading)
+  window._onMapsReady = function() { window._mapsReady = true; };
   fetch('galleries.json')
     .then(r => r.json())
     .then(data => { window.GALLERIES = data; })

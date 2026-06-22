@@ -214,8 +214,6 @@
   let _infoWindow = null;
   let _markers = [];
   let _routePolyline = null;
-  // Callback registered as Maps JS API loads async
-  window._onMapsReady = function() { window._mapsReady = true; };
 
   // Town-level fallback coords for the 5 venues without exact geocoding
   const TOWN_FALLBACK = window.TOWN_COORDS || {};
