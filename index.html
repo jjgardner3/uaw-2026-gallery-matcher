@@ -136,8 +136,12 @@
 </footer>
 
 <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUP9bfQw5k-MpxNB3Nvqa48162MhBu6fU&callback=_onMapsReady&loading=async"></script>
-<script src="data.js"></script>
-<script src="app.js"></script>
+<script>
+  fetch('galleries.json')
+    .then(r => r.json())
+    .then(data => { window.GALLERIES = data; })
+    .then(() => { const s = document.createElement('script'); s.src = 'app.js'; document.body.appendChild(s); });
+</script>
 <script>
 (function () {
   const t = document.querySelector('[data-theme-toggle]'), r = document.documentElement;
