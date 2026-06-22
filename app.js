@@ -205,7 +205,7 @@
     const stops = [...t1, ...t2, ...t3]
       .filter(x => !VAGUE_LOCS.has(x.g.location))
       .slice(0, 9)
-      .map(x => encodeURIComponent(x.g.name + ", " + x.g.location));
+      .map(x => encodeURIComponent(x.g.address || (x.g.name + ", " + x.g.location)));
     return stops.length ? "https://www.google.com/maps/dir/" + stops.join("/") : null;
   }
 
@@ -308,7 +308,7 @@
         const g = x.g;
         rows.push([
           g.name,
-          g.name + ", " + g.location,   // venue name + city helps Google find the exact place
+          g.address || (g.name + ", " + g.location),   // use street address when available
           TIER_LABEL[tier],
           g.blurb || "",
           g.website || ""
@@ -648,7 +648,7 @@
     const stops = [...itinerary.values()]
       .filter(g => !VAGUE_LOCS.has(g.location))
       .slice(0, 9)
-      .map(g => encodeURIComponent(g.name + ', ' + g.location));
+      .map(g => encodeURIComponent(g.address || (g.name + ', ' + g.location)));
     const mapsBtn = document.getElementById('itin-maps-btn');
     mapsBtn.href = stops.length ? 'https://www.google.com/maps/dir/' + stops.join('/') : '#';
     mapsBtn.style.display = stops.length ? '' : 'none';
@@ -669,7 +669,7 @@
         <div class="stop-num">${i + 1}</div>
         <div class="stop-body">
           <h2><a href="${url}">${g.name}</a></h2>
-          <p class="loc">${g.location}</p>
+          <p class="loc">${g.address || g.location}</p>
           ${g.show ? `<p class="show">${g.show}</p>` : ''}
           <ul class="hours">${hoursHtml}</ul>
         </div>
@@ -677,7 +677,7 @@
     }).join('');
 
     const mapsStops = galleries.filter(g => !VAGUE_LOCS.has(g.location)).slice(0, 9)
-      .map(g => encodeURIComponent(g.name + ', ' + g.location));
+      .map(g => encodeURIComponent(g.address || (g.name + ', ' + g.location)));
     const mapsUrl = mapsStops.length ? 'https://www.google.com/maps/dir/' + mapsStops.join('/') : null;
 
     const win = window.open('', '_blank');

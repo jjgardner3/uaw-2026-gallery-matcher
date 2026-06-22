@@ -26,7 +26,8 @@
     "website": "https://www.instagram.com/1053gallery",
     "bloomberg_uuid": "307fc89d-451f-4c00-a375-794fc45783c5",
     "lat": 42.1567576,
-    "lng": -74.52817879999999
+    "lng": -74.52817879999999,
+    "address": "1053 Main Street, Fleischmanns, New York 12430"
   },
   {
     "name": "2773 Church Street Studios",
@@ -55,7 +56,8 @@
     "website": "https://www.instagram.com/kiernan_pazdar/",
     "bloomberg_uuid": "ded1f5d6-05cc-4c85-bf75-7cd78cc84548",
     "lat": 42.0409247,
-    "lng": -74.1181971
+    "lng": -74.1181971,
+    "address": "4 Mill Hill Road, Town of Woodstock, New York 12498"
   },
   {
     "name": "68 Prince St Gallery",
@@ -118,13 +120,14 @@
     "website": "http://alloneoneall.org",
     "bloomberg_uuid": "a8d59105-51d5-4873-a578-1616a47706ae",
     "lat": 41.7856489,
-    "lng": -74.2290366
+    "lng": -74.2290366,
+    "address": "G L F Road, Accord, New York 12404"
   },
   {
     "name": "Alpana Bawa",
     "location": "Woodstock, NY",
     "town": "Woodstock",
-    "blurb": "Emily Barletta presents stitched works on paper rooted in repetitive mark-making \u2014 intimate, meditative pieces that function as personal journals of time and experience.",
+    "blurb": "Emily Barletta presents stitched works on paper rooted in repetitive mark-making — intimate, meditative pieces that function as personal journals of time and experience.",
     "show": "",
     "aesthetics": [
       "contemporary",
@@ -147,7 +150,8 @@
     "website": "https://www.instagram.com/alpanabawashop/",
     "bloomberg_uuid": "581f318a-4d9d-4e68-9d47-58a1ff363442",
     "lat": 41.7161091,
-    "lng": -74.3923926
+    "lng": -74.3923926,
+    "address": "163 Canal Street, Village of Ellenville, New York 12428"
   },
   {
     "name": "Ann Street Gallery",
@@ -178,7 +182,8 @@
     "website": "https://annstreetgallery.org/",
     "bloomberg_uuid": "e44a77c1-1622-4ed4-b525-9cfe17138293",
     "lat": 41.4994807,
-    "lng": -74.0118076
+    "lng": -74.0118076,
+    "address": "104 Ann Street, City of Newburgh, New York 12550"
   },
   {
     "name": "Architectural Interventions",
@@ -214,7 +219,8 @@
     "website": "https://www.instagram.com/architectural_interventions/",
     "bloomberg_uuid": "302775c7-b74a-462a-93d3-43982bdd3765",
     "lat": 42.2528649,
-    "lng": -73.790959
+    "lng": -73.790959,
+    "address": "306-308 Warren Street, City of Hudson, New York 12534"
   },
   {
     "name": "Army Of Frogs Studio",
@@ -243,7 +249,8 @@
     "website": "https://www.instagram.com/armyoffrogsstudio/",
     "bloomberg_uuid": "2c7a9a7e-4e8c-42d6-98ac-013dc115303c",
     "lat": 41.8089555,
-    "lng": -74.1305977
+    "lng": -74.1305977,
+    "address": "277 Mohonk Road, High Falls, New York 12440"
   },
   {
     "name": "Art Omi",
@@ -274,7 +281,8 @@
     "website": "https://artomi.org/exhibition/nayland-blake-haunt/",
     "bloomberg_uuid": "075d9653-2547-4d86-898e-b18822d5cd81",
     "lat": 42.3311545,
-    "lng": -73.672511
+    "lng": -73.672511,
+    "address": "1405 County Road 22, Town of Ghent, New York 12075"
   },
   {
     "name": "Art Sales & Research",
@@ -316,7 +324,8 @@
     "website": "https://www.instagram.com/artsalesandresearch/",
     "bloomberg_uuid": "a967468b-34e2-49c9-a5f3-03075d2df684",
     "lat": 41.9270506,
-    "lng": -73.9094272
+    "lng": -73.9094272,
+    "address": "75 East Market Street, Village of Rhinebeck, New York 12572"
   },
   {
     "name": "ART06870 gallery",
@@ -343,7 +352,8 @@
     "website": "https://www.instagram.com/art06870/",
     "bloomberg_uuid": "67d148aa-db13-4d15-9855-2e047f02171b",
     "lat": 41.8586493,
-    "lng": -74.3118212
+    "lng": -74.3118212,
+    "address": "106 Braziel Heights Road, New York 12446"
   },
   {
     "name": "Artport Kingston",
@@ -371,7 +381,8 @@
     "website": "https://www.instagram.com/artportkingston/",
     "bloomberg_uuid": "a462be0c-34a4-4969-9823-d5ea03a05927",
     "lat": 41.930674,
-    "lng": -73.9984351
+    "lng": -73.9984351,
+    "address": "80 Smith Avenue, City of Kingston, New York 12401"
   },
   {
     "name": "Arts on the Lake",
@@ -399,7 +410,8 @@
     "website": "https://www.instagram.com/artsonthelake/",
     "bloomberg_uuid": "833028b5-187e-4b2d-bc18-b4338b705bbc",
     "lat": 42.1344541,
-    "lng": -73.89164579999999
+    "lng": -73.89164579999999,
+    "address": "4291 Main Street, Town of Germantown, New York 12526"
   },
   {
     "name": "Arts Society of Kingston",
@@ -429,7 +441,8 @@
     "website": "https://www.instagram.com/askart_askart/",
     "bloomberg_uuid": "af5de66e-1bfc-4ae0-b6c9-b77f8ed62f6e",
     "lat": 41.9200909,
-    "lng": -73.9857859
+    "lng": -73.9857859,
+    "address": "97 Broadway, City of Kingston, New York 12401"
   },
   {
     "name": "Arts&Rec / OSMOS Station",
@@ -461,7 +474,8 @@
     "website": "http://osmos.online",
     "bloomberg_uuid": "68a78b5f-7cd2-4154-9771-f364eb044163",
     "lat": 42.2403646,
-    "lng": -74.3654253
+    "lng": -74.3654253,
+    "address": "3926 State Route 42, Town of Lexington, New York 12468"
   },
   {
     "name": "ArtsWestchester",
@@ -516,7 +530,8 @@
     "website": "http://upstate-gnarly.com",
     "bloomberg_uuid": "247dd3fe-658e-49bd-b0fa-47f079329da6",
     "lat": 42.411223,
-    "lng": -73.525481
+    "lng": -73.525481,
+    "address": "1123 Albany Turnpike, Town of Chatham, New York 12060"
   },
   {
     "name": "Assembly",
@@ -535,13 +550,14 @@
     "website": "https://noisefornow.org/",
     "bloomberg_uuid": "c3170d57-b4ad-4243-bc79-b58feb1883c8",
     "lat": 41.9317384,
-    "lng": -74.0186475
+    "lng": -74.0186475,
+    "address": "236 Wall Street, City of Kingston, New York 12401"
   },
   {
     "name": "Athens Cultural Center",
     "location": "Athens, NY",
     "town": "Athens",
-    "blurb": "Animal Bodies presents the large-scale textile work of Elana Herzog, Jean Shin, and Brigitta V\u00e1radi, examining connections between textile design, manufacturing, and the relationships between wild and settled worlds.",
+    "blurb": "Animal Bodies presents the large-scale textile work of Elana Herzog, Jean Shin, and Brigitta Váradi, examining connections between textile design, manufacturing, and the relationships between wild and settled worlds.",
     "show": "Animal Bodies",
     "aesthetics": [
       "contemporary",
@@ -554,7 +570,7 @@
     "artists": [
       "Elana Herzog",
       "Jean Shin",
-      "Brigitta V\u00e1radi"
+      "Brigitta Váradi"
     ],
     "notable": false,
     "region": "Catskills",
@@ -566,7 +582,8 @@
     "website": "https://www.instagram.com/athensculturalcenter/",
     "bloomberg_uuid": "8d7499f0-0e14-4714-8fda-422a456e0fbc",
     "lat": 42.2604131,
-    "lng": -73.8091278
+    "lng": -73.8091278,
+    "address": "24 2nd Street, Village of Athens, New York 12015"
   },
   {
     "name": "Available Items x Amin Tadj Studio",
@@ -595,7 +612,8 @@
     "website": "",
     "bloomberg_uuid": "d32d6063-27f4-4da4-a87e-b925ad16bf92",
     "lat": 42.0092908,
-    "lng": -74.3821116
+    "lng": -74.3821116,
+    "address": "Town of Shandaken, New York"
   },
   {
     "name": "Bank Art Gallery",
@@ -624,7 +642,8 @@
     "website": "https://www.bankartgallery.com/",
     "bloomberg_uuid": "39434d07-3053-4fde-ad95-0d0df9635bdd",
     "lat": 41.5003186,
-    "lng": -74.010503
+    "lng": -74.010503,
+    "address": "94 Broadway, City of Newburgh, New York 12550"
   },
   {
     "name": "BAU Gallery",
@@ -652,7 +671,8 @@
     "website": "https://www.instagram.com/baugallery/",
     "bloomberg_uuid": "03d0901b-1b0c-4880-bd19-837601d44484",
     "lat": 41.5023856,
-    "lng": -73.96348189999999
+    "lng": -73.96348189999999,
+    "address": "506-512 Main Street, City of Beacon, New York 12508"
   },
   {
     "name": "BCMT GALLERY",
@@ -691,7 +711,8 @@
     "website": "https://www.instagram.com/bcmtco/",
     "bloomberg_uuid": "5f4b5070-dd09-4889-ace7-514c13662b3a",
     "lat": 41.9376519,
-    "lng": -74.0288329
+    "lng": -74.0288329,
+    "address": "79 Hurley Avenue, City of Kingston, New York 12401"
   },
   {
     "name": "Beattie Powers Place",
@@ -719,7 +740,8 @@
     "website": "http://beattiepowersplace.org",
     "bloomberg_uuid": "50172334-a140-492d-b0ba-904f3b764227",
     "lat": 42.2182086,
-    "lng": -73.8578826
+    "lng": -73.8578826,
+    "address": "10 Powers Place, Village of Catskill, New York 12414"
   },
   {
     "name": "Bethany Arts Community",
@@ -745,7 +767,8 @@
     "website": "http://bethanyarts.org",
     "bloomberg_uuid": "98c43a5e-2026-4cd5-ad12-0b3a9e7dfa01",
     "lat": 41.1725158,
-    "lng": -73.8303833
+    "lng": -73.8303833,
+    "address": "40 Somerstown Road, Town of Ossining, New York 10562"
   },
   {
     "name": "Bosco's Mercantile",
@@ -775,7 +798,8 @@
     "website": "http://Jeffwilliamlee.art",
     "bloomberg_uuid": "a01c53f4-476c-4f16-b15e-efd25d501a7d",
     "lat": 41.9337619,
-    "lng": -74.019093
+    "lng": -74.019093,
+    "address": "38 John Street, City of Kingston, New York 12401"
   },
   {
     "name": "Boscobel House and Gardens",
@@ -802,20 +826,21 @@
     "website": "https://www.instagram.com/boscobelhg/",
     "bloomberg_uuid": "c667d580-fc7b-45d9-bff7-63b2798373f3",
     "lat": 41.411731,
-    "lng": -73.93924299999999
+    "lng": -73.93924299999999,
+    "address": "Boscobel, New York 10997"
   },
   {
     "name": "Caramoor Center for Music and the Arts",
     "location": "Katonah, NY",
     "town": "Katonah",
-    "blurb": "Pianist H\u00e9l\u00e8ne Grimaud returns to Caramoor for a recital exploring the emotional landscapes of Bach, Beethoven, and Brahms.",
+    "blurb": "Pianist Hélène Grimaud returns to Caramoor for a recital exploring the emotional landscapes of Bach, Beethoven, and Brahms.",
     "show": "",
     "aesthetics": [
       "performance"
     ],
     "mediums": [],
     "artists": [
-      "H\u00e9l\u00e8ne Grimaud"
+      "Hélène Grimaud"
     ],
     "notable": false,
     "region": "Westchester & South",
@@ -830,13 +855,14 @@
     "website": "http://caramoor.org",
     "bloomberg_uuid": "be421f32-e906-4f93-a905-403f8b87ed50",
     "lat": 41.2380667,
-    "lng": -73.6455197
+    "lng": -73.6455197,
+    "address": "149 Girdle Ridge Road, Town of Bedford, New York 10536"
   },
   {
     "name": "Carolee Schneemann Foundation",
     "location": "Rosendale, NY",
     "town": "Rosendale",
-    "blurb": "A presentation of films and performance-based videos by the late Carolee Schneemann, including Interior Scroll \u2013 The Cave, set within the atmospheric Widow Jane Mine in Rosendale.",
+    "blurb": "A presentation of films and performance-based videos by the late Carolee Schneemann, including Interior Scroll – The Cave, set within the atmospheric Widow Jane Mine in Rosendale.",
     "show": "",
     "aesthetics": [
       "contemporary",
@@ -856,7 +882,8 @@
     "website": "https://www.instagram.com/schneemannfoundation/",
     "bloomberg_uuid": "13abf585-25d7-4cc7-aefc-726ed5321dc3",
     "lat": 41.8443125,
-    "lng": -74.0810669
+    "lng": -74.0810669,
+    "address": "381 Main Street, Tillson, New York 12472"
   },
   {
     "name": "Carrie Haddad Gallery",
@@ -892,7 +919,8 @@
     "website": "https://www.instagram.com/carriehaddadgallery/",
     "bloomberg_uuid": "b7bb61e9-6b5b-476b-ac0d-475cc2248fb6",
     "lat": 42.247552,
-    "lng": -73.78364700000002
+    "lng": -73.78364700000002,
+    "address": "624 Warren Street, City of Hudson, New York 12534"
   },
   {
     "name": "Catskill Art Space",
@@ -920,13 +948,14 @@
     "website": "https://www.instagram.com/catskillartspace/",
     "bloomberg_uuid": "22d0875a-b3df-4ec0-8a38-1ae4c2f73c50",
     "lat": 41.9008934,
-    "lng": -74.8281059
+    "lng": -74.8281059,
+    "address": "48 Main Street, Livingston Manor, New York 12758"
   },
   {
     "name": "Catskill Octagon House",
     "location": "Catskill, NY",
     "town": "Catskill",
-    "blurb": "Louche Company presents work by Sita G\u00f3mez, Baker Overstreet, and Claudia Renfro \u2014 queens, clowns, demons, and dolls rendered in paint, assemblage, and three-dimensional sculptural forms.",
+    "blurb": "Louche Company presents work by Sita Gómez, Baker Overstreet, and Claudia Renfro — queens, clowns, demons, and dolls rendered in paint, assemblage, and three-dimensional sculptural forms.",
     "show": "",
     "aesthetics": [
       "contemporary",
@@ -938,7 +967,7 @@
       "sculpture"
     ],
     "artists": [
-      "Sita G\u00f3mez",
+      "Sita Gómez",
       "Baker Overstreet",
       "Claudia Renfro"
     ],
@@ -954,7 +983,8 @@
     "website": "http://hannahbarrett.net/louche-company.html",
     "bloomberg_uuid": "69bab33d-c645-412f-87da-881661bef93c",
     "lat": 42.2173102,
-    "lng": -73.8645734
+    "lng": -73.8645734,
+    "address": "320 Main Street, Village of Catskill, New York 12414"
   },
   {
     "name": "ChaNorth (Chashama North)",
@@ -980,7 +1010,8 @@
     "website": "https://www.instagram.com/chanorthartresidency/",
     "bloomberg_uuid": "48652b3a-e5c9-4e4d-b7d7-048f7a65d6c6",
     "lat": 41.9882215,
-    "lng": -73.6811283
+    "lng": -73.6811283,
+    "address": "2598 State Highway 199, Town of Pine Plains, New York 12567"
   },
   {
     "name": "Chapel of Sacred Mirrors",
@@ -1010,7 +1041,8 @@
     "website": "https://www.instagram.com/chapelofsacredmirrors/",
     "bloomberg_uuid": "945f9789-1338-4eb8-a4e5-e98027524706",
     "lat": 41.5807733,
-    "lng": -73.9353387
+    "lng": -73.9353387,
+    "address": "65 Deer Hill Road, Village of Wappingers Falls, New York 12590"
   },
   {
     "name": "Charlotte Woolf at Foxtrot Farm & Flowers",
@@ -1041,13 +1073,14 @@
     "website": "https://www.instagram.com/charfromcharlotte/",
     "bloomberg_uuid": "3865a13c-40ac-4ac9-83d2-07ac0f373bdf",
     "lat": 41.9209018,
-    "lng": -73.9612887
+    "lng": -73.9612887,
+    "address": "Kingston Point Rail Trail, City of Kingston, New York 12574"
   },
   {
     "name": "Cold Spring Ceramics",
     "location": "Cold Spring, NY",
     "town": "Cold Spring",
-    "blurb": "An exhibition of handmade ceramic piggy banks in playful forms \u2014 dinosaurs and whales \u2014 accompanied by a weekend of hand-building clay workshops for kids and adults.",
+    "blurb": "An exhibition of handmade ceramic piggy banks in playful forms — dinosaurs and whales — accompanied by a weekend of hand-building clay workshops for kids and adults.",
     "show": "",
     "aesthetics": [
       "craft",
@@ -1069,7 +1102,8 @@
     "website": "http://www.coldspringceramics.com",
     "bloomberg_uuid": "e8e6e265-1292-4c81-90e5-2c42122a45e5",
     "lat": 41.4192267,
-    "lng": -73.9558091
+    "lng": -73.9558091,
+    "address": "165 Main Street, Village of Cold Spring, New York 10997"
   },
   {
     "name": "Color Wheels",
@@ -1098,7 +1132,8 @@
     "website": "https://www.instagram.com/colorwheels_uaw/",
     "bloomberg_uuid": "f4ea38b6-24ea-4c69-b778-e1e7a95797ef",
     "lat": 41.8267596,
-    "lng": -74.12625489999999
+    "lng": -74.12625489999999,
+    "address": "3 Mohonk Road, High Falls, New York 12440"
   },
   {
     "name": "Community Hinterland",
@@ -1126,13 +1161,14 @@
     "website": "http://www.thisishinterlandny.com",
     "bloomberg_uuid": "a009c0f9-faa9-453b-b078-0e539bf9f388",
     "lat": 41.9209018,
-    "lng": -73.9612887
+    "lng": -73.9612887,
+    "address": "Kingston Point Rail Trail, City of Kingston, New York 12574"
   },
   {
     "name": "Contra Projects",
     "location": "Hudson, NY",
     "town": "Hudson",
-    "blurb": "Flames Of Setting Suns is a solo exhibition by Panamanian artist Iv\u00e1n Blasser, channeling the Pacific coast's incandescent horizon through raw iron forms \u2014 elemental and gestural.",
+    "blurb": "Flames Of Setting Suns is a solo exhibition by Panamanian artist Iván Blasser, channeling the Pacific coast's incandescent horizon through raw iron forms — elemental and gestural.",
     "show": "Flames Of Setting Suns",
     "aesthetics": [
       "contemporary",
@@ -1142,7 +1178,7 @@
       "sculpture"
     ],
     "artists": [
-      "Iv\u00e1n Blasser"
+      "Iván Blasser"
     ],
     "notable": false,
     "region": "Hudson & Columbia",
@@ -1154,7 +1190,8 @@
     "website": "http://ruralprojects.org",
     "bloomberg_uuid": "77a5f6a4-5b05-4b21-aefa-8eb10c4d2c39",
     "lat": 42.2528649,
-    "lng": -73.790959
+    "lng": -73.790959,
+    "address": "306-308 Warren Street, City of Hudson, New York 12534"
   },
   {
     "name": "CPW",
@@ -1178,7 +1215,8 @@
     "website": "https://www.instagram.com/cpw_kingston/",
     "bloomberg_uuid": "11c593bf-9edc-4bfc-97c5-d7f47997856d",
     "lat": 42.0409247,
-    "lng": -74.1181971
+    "lng": -74.1181971,
+    "address": "4 Mill Hill Road, Town of Woodstock, New York 12498"
   },
   {
     "name": "Cronin Gallery + Trimper Gallery",
@@ -1214,7 +1252,8 @@
     "website": "https://www.cronartusa.com/pages/uaw-2026",
     "bloomberg_uuid": "cc143324-222f-4948-b04e-f622d9d81c0b",
     "lat": 42.1424234,
-    "lng": -73.77791619999999
+    "lng": -73.77791619999999,
+    "address": "115 Church Road, City of Hudson, New York 12534"
   },
   {
     "name": "DARNStudios at (Creative Legion)",
@@ -1243,7 +1282,8 @@
     "website": "https://www.creativelegion.com/darnstudio-invading-spaces",
     "bloomberg_uuid": "d1292afe-400c-41d7-9e7a-370e982d8b67",
     "lat": 42.2472682,
-    "lng": -73.77415309999999
+    "lng": -73.77415309999999,
+    "address": "7 Fairview Avenue, City of Hudson, New York 12534"
   },
   {
     "name": "Deborah Masters Studio",
@@ -1272,7 +1312,8 @@
     "website": "https://www.instagram.com/DeborahMastersStudio/",
     "bloomberg_uuid": "f67345ac-9e81-4f58-a677-7837f2ea8d6f",
     "lat": 41.9209018,
-    "lng": -73.9612887
+    "lng": -73.9612887,
+    "address": "Kingston Point Rail Trail, City of Kingston, New York 12574"
   },
   {
     "name": "Delaware Valley Arts Alliance",
@@ -1300,7 +1341,8 @@
     "website": "https://www.instagram.com/dvartsalliance/",
     "bloomberg_uuid": "4af3c0c4-c1f0-44dc-8301-df35e239efa9",
     "lat": 41.6084153,
-    "lng": -75.0611503
+    "lng": -75.0611503,
+    "address": "37 Main Street, Narrowsburg, New York 12764"
   },
   {
     "name": "Dia Art Foundation",
@@ -1336,13 +1378,14 @@
     "website": "https://www.instagram.com/diaartfoundation/",
     "bloomberg_uuid": "545ccd69-f0ae-4e5c-b8aa-5a55e35277f3",
     "lat": 41.5000753,
-    "lng": -73.9825664
+    "lng": -73.9825664,
+    "address": "3 Beekman Street, City of Beacon, New York 12508"
   },
   {
     "name": "Distortion Society",
     "location": "Hudson, NY",
     "town": "Hudson",
-    "blurb": "Larrupin is a solo exhibition by Guatemalan-born installation artist Josu\u00e9 Morales Urbina, curated by Michelle Silver, centered on the experience of living between two worlds and places.",
+    "blurb": "Larrupin is a solo exhibition by Guatemalan-born installation artist Josué Morales Urbina, curated by Michelle Silver, centered on the experience of living between two worlds and places.",
     "show": "Larrupin",
     "aesthetics": [
       "contemporary",
@@ -1353,7 +1396,7 @@
       "sculpture"
     ],
     "artists": [
-      "Josu\u00e9 Morales Urbina"
+      "Josué Morales Urbina"
     ],
     "notable": false,
     "region": "Hudson & Columbia",
@@ -1367,7 +1410,8 @@
     "website": "https://www.distortionsociety.com/exhibitions",
     "bloomberg_uuid": "fdcfaa2c-9538-4fc3-a4c1-e42413888a5b",
     "lat": 41.5081508,
-    "lng": -73.97609349999999
+    "lng": -73.97609349999999,
+    "address": "151 Main Street, City of Beacon, New York 12508"
   },
   {
     "name": "East Branch Nature Preserve - Outdoor Sculpture Series",
@@ -1393,13 +1437,14 @@
     "website": "https://www.instagram.com/catskillwaterdiscoverycenter/",
     "bloomberg_uuid": "7b4bc90d-0116-4f1f-b9e1-6a4e025d1425",
     "lat": 41.9884206,
-    "lng": -75.13377919999999
+    "lng": -75.13377919999999,
+    "address": "4005 O&W Road, Town of Hancock, New York 13756"
   },
   {
     "name": "Edward Hopper House Museum & Study Center",
     "location": "Nyack, NY",
     "town": "Nyack",
-    "blurb": "James Prosek: Memory Trees \u2014 over twenty new works by the artist, writer, and naturalist examining how we classify, name, and communicate our place within the natural world.",
+    "blurb": "James Prosek: Memory Trees — over twenty new works by the artist, writer, and naturalist examining how we classify, name, and communicate our place within the natural world.",
     "show": "Memory Trees",
     "aesthetics": [
       "contemporary",
@@ -1425,7 +1470,8 @@
     "website": "https://www.instagram.com/edwardhopperhouse/",
     "bloomberg_uuid": "e5b0b917-45a3-4111-b8d5-d0fba8bab828",
     "lat": 41.09328,
-    "lng": -73.91797
+    "lng": -73.91797,
+    "address": "82 North Broadway, Village of Nyack, New York 10960"
   },
   {
     "name": "FABHAUS",
@@ -1451,7 +1497,8 @@
     "website": "https://www.instagram.com/fabhaus/",
     "bloomberg_uuid": "6708cc81-0650-40e0-990b-d702636be131",
     "lat": 41.4956061,
-    "lng": -74.0109432
+    "lng": -74.0109432,
+    "address": "34 Liberty Street, City of Newburgh, New York 12550"
   },
   {
     "name": "Farm & Field",
@@ -1481,7 +1528,8 @@
     "website": "https://www.instagram.com/farmandfieldny/",
     "bloomberg_uuid": "22c9011f-604f-4030-83b4-a9dbdaf45ab3",
     "lat": 42.7266791,
-    "lng": -73.6810318
+    "lng": -73.6810318,
+    "address": "10 Farm Street, City of Troy, New York 12180"
   },
   {
     "name": "Forged Hands",
@@ -1511,7 +1559,8 @@
     "website": "https://www.instagram.com/sethsterb/",
     "bloomberg_uuid": "cd6fe334-6733-4c68-9001-9aaeb9fa1e89",
     "lat": 43.3004914,
-    "lng": -73.58570739999999
+    "lng": -73.58570739999999,
+    "address": "Maple Street, Village of Hudson Falls, New York 12839"
   },
   {
     "name": "Foreland",
@@ -1536,13 +1585,14 @@
     "website": "https://www.instagram.com/forelandcatskill/",
     "bloomberg_uuid": "5b950a30-0dae-4bd5-976b-8e1c5a32d1ba",
     "lat": 42.2181117,
-    "lng": -73.8662987
+    "lng": -73.8662987,
+    "address": "111 Water Street, Village of Catskill, New York 12414"
   },
   {
     "name": "Frances Lehman Loeb Art Center, Vassar College",
     "location": "Poughkeepsie, NY",
     "town": "Poughkeepsie",
-    "blurb": "A Living Legacy: Gifts from Lynn Gross Straus presents important prints donated to Vassar by artists including K\u00e4the Kollwitz, Edvard Munch, Lee Bontecou, Helen Frankenthaler, and Frank Stella.",
+    "blurb": "A Living Legacy: Gifts from Lynn Gross Straus presents important prints donated to Vassar by artists including Käthe Kollwitz, Edvard Munch, Lee Bontecou, Helen Frankenthaler, and Frank Stella.",
     "show": "A Living Legacy: Gifts from Lynn Gross Straus",
     "aesthetics": [
       "modern",
@@ -1553,7 +1603,7 @@
       "works_on_paper"
     ],
     "artists": [
-      "K\u00e4the Kollwitz",
+      "Käthe Kollwitz",
       "Edvard Munch",
       "Lee Bontecou",
       "Helen Frankenthaler",
@@ -1570,7 +1620,8 @@
     "website": "https://www.instagram.com/theloeb/",
     "bloomberg_uuid": "7bbd760d-1e46-4f87-8679-86d7b99fe68f",
     "lat": 41.6860874,
-    "lng": -73.8974068
+    "lng": -73.8974068,
+    "address": "124 Raymond Avenue, City of Poughkeepsie, New York 12604"
   },
   {
     "name": "Freewheelin'",
@@ -1598,7 +1649,8 @@
     "website": "https://www.instagram.com/meglipke/",
     "bloomberg_uuid": "b29a0b36-8014-4237-a84e-05b6b4ff3a51",
     "lat": 41.9209018,
-    "lng": -73.9612887
+    "lng": -73.9612887,
+    "address": "Kingston Point Rail Trail, City of Kingston, New York 12574"
   },
   {
     "name": "Friday Arts",
@@ -1632,7 +1684,8 @@
     "website": "http://friday-arts.com",
     "bloomberg_uuid": "1f921485-093e-4d56-84d3-c17b6fbc44c9",
     "lat": 42.2528649,
-    "lng": -73.790959
+    "lng": -73.790959,
+    "address": "306-308 Warren Street, City of Hudson, New York 12534"
   },
   {
     "name": "Friends of River Hook",
@@ -1655,7 +1708,8 @@
     "website": "http://riverhook.org",
     "bloomberg_uuid": "ef31c2ca-0909-461f-86ce-13ed6f907a6d",
     "lat": 41.1148179,
-    "lng": -74.1495889
+    "lng": -74.1495889,
+    "address": "Washington Avenue, Village of Suffern, New York 07495"
   },
   {
     "name": "Front Room Gallery - Expanded Field",
@@ -1685,7 +1739,8 @@
     "website": "https://www.instagram.com/frontroomnyc/",
     "bloomberg_uuid": "244c93ca-91c4-4311-b6e6-32cb0136573b",
     "lat": 42.2542556,
-    "lng": -73.7931668
+    "lng": -73.7931668,
+    "address": "205 Warren Street, City of Hudson, New York 12534"
   },
   {
     "name": "Frost Valley YMCA",
@@ -1713,7 +1768,8 @@
     "website": "https://www.instagram.com/frostvalleyymca/",
     "bloomberg_uuid": "5317b702-530f-4f1b-bd5d-1fe5d0acab60",
     "lat": 41.9886635,
-    "lng": -74.5054676
+    "lng": -74.5054676,
+    "address": "2000 Frost Valley Road, Frost Valley, New York 12725"
   },
   {
     "name": "Gaa",
@@ -1736,16 +1792,17 @@
     "notable": true,
     "region": "Catskills",
     "hours": [
-      "Thursday, June 25 | 11 AM \u2013 5 PM",
-      "Friday, June 26 | 11 AM \u2013 5 PM",
-      "Saturday, June 27 | 11 AM \u2013 7 PM",
-      "Sunday, June 28 | 11 AM \u2013 5 PM",
-      "Monday, June 29 | 11 AM \u2013 5 PM"
+      "Thursday, June 25 | 11 AM – 5 PM",
+      "Friday, June 26 | 11 AM – 5 PM",
+      "Saturday, June 27 | 11 AM – 7 PM",
+      "Sunday, June 28 | 11 AM – 5 PM",
+      "Monday, June 29 | 11 AM – 5 PM"
     ],
     "website": "http://gaagallery.com",
     "bloomberg_uuid": "b826f639-6531-49b6-a9c5-2a185de26fc9",
     "lat": 42.2173102,
-    "lng": -73.8645734
+    "lng": -73.8645734,
+    "address": "320 Main Street, Village of Catskill, New York 12414"
   },
   {
     "name": "GARNER Arts Center",
@@ -1773,7 +1830,8 @@
     "website": "https://www.instagram.com/garnerartscenter/",
     "bloomberg_uuid": "7c0cbfc5-8b00-45ab-980d-56105855c0de",
     "lat": 41.208751,
-    "lng": -73.98993759999999
+    "lng": -73.98993759999999,
+    "address": "55 West Railroad Avenue, Town of Haverstraw, New York 10923"
   },
   {
     "name": "Garrison Art Center",
@@ -1796,7 +1854,8 @@
     "website": "https://www.instagram.com/garrisonartcenter/",
     "bloomberg_uuid": "921d34dc-9ea8-4d02-a7ec-b35b0fe5dbe0",
     "lat": 41.3826302,
-    "lng": -73.94730770000001
+    "lng": -73.94730770000001,
+    "address": "23 Garrison Lodge, Garrison, New York 10524"
   },
   {
     "name": "Gatherwild Ranch",
@@ -1831,7 +1890,8 @@
     "website": "https://www.instagram.com/gatherwildranch/",
     "bloomberg_uuid": "8fcb42d3-9253-4461-8c76-11c7f1b07a94",
     "lat": 42.1191733,
-    "lng": -73.8728624
+    "lng": -73.8728624,
+    "address": "331 Roundtop Road, Town of Germantown, New York 12526"
   },
   {
     "name": "Glasshouse Project Inc.",
@@ -1857,13 +1917,14 @@
     "website": "https://www.instagram.com/glasshouse247/",
     "bloomberg_uuid": "8e4d5edf-f56c-4901-af72-2148eed2123c",
     "lat": 41.78056489999999,
-    "lng": -74.0887123
+    "lng": -74.0887123,
+    "address": "251 Springtown Road, Town of New Paltz, New York 12561"
   },
   {
     "name": "Glogg Glogg",
     "location": "Hudson Valley, NY",
     "town": "Hudson Valley",
-    "blurb": "Gl\u00f6gg Gl\u00f6gg is a pop-up art fair hosted by Melissa Dadourian, Mandolyn Wilson Rosen, and Amy Talluto, bringing together over 30 contemporary artists living across Upstate New York with more than 200 unique works.",
+    "blurb": "Glögg Glögg is a pop-up art fair hosted by Melissa Dadourian, Mandolyn Wilson Rosen, and Amy Talluto, bringing together over 30 contemporary artists living across Upstate New York with more than 200 unique works.",
     "show": "",
     "aesthetics": [
       "contemporary"
@@ -1886,7 +1947,8 @@
     "website": "https://www.instagram.com/glogg_glogg/",
     "bloomberg_uuid": "8024ac2a-8b64-4157-92fa-73fed2e43023",
     "lat": 41.9209018,
-    "lng": -73.9612887
+    "lng": -73.9612887,
+    "address": "Kingston Point Rail Trail, City of Kingston, New York 12574"
   },
   {
     "name": "Good Naked Gallery",
@@ -1909,7 +1971,8 @@
     "website": "http://www.goodnakedgallery.com",
     "bloomberg_uuid": "55e39441-6b4b-4745-a01a-cbdeffd61486",
     "lat": 41.6734269,
-    "lng": -74.3854321
+    "lng": -74.3854321,
+    "address": "146 Henry Road, Pine Bush, New York 12566"
   },
   {
     "name": "Goshen Green Farm",
@@ -1937,7 +2000,8 @@
     "website": "https://www.instagram.com/goshengreenfarm/",
     "bloomberg_uuid": "aafc1e6c-8a37-4aa5-99f2-2e69cb6658e9",
     "lat": 41.4241027,
-    "lng": -74.3016076
+    "lng": -74.3016076,
+    "address": "3300 State Route 207, Town of Goshen, New York 10924"
   },
   {
     "name": "Hammond Museum",
@@ -1969,7 +2033,8 @@
     "website": "http://hammondmuseum.art",
     "bloomberg_uuid": "9c180032-4d9f-4a28-aeb1-c4e28a5f020f",
     "lat": 41.3319206,
-    "lng": -73.5818109
+    "lng": -73.5818109,
+    "address": "28 Deveau Road, Town of North Salem, New York 10560"
   },
   {
     "name": "Headstone Gallery",
@@ -1999,7 +2064,8 @@
     "website": "https://www.instagram.com/headstonegallery.ny/",
     "bloomberg_uuid": "4b778fc1-9e52-4f04-b7eb-a19cf796928b",
     "lat": 41.9359729,
-    "lng": -74.0264452
+    "lng": -74.0264452,
+    "address": "26 Hurley Avenue, City of Kingston, New York 12401"
   },
   {
     "name": "Hessel Museum of Art, Bard College",
@@ -2030,7 +2096,8 @@
     "website": "http://ccs.bard.edu",
     "bloomberg_uuid": "118900b3-afe4-4102-8218-3b497f6bff48",
     "lat": 42.0202817,
-    "lng": -73.91418829999999
+    "lng": -73.91418829999999,
+    "address": "33 Garden Road, Town of Red Hook, New York 12504"
   },
   {
     "name": "Howland Cultural Center",
@@ -2059,7 +2126,8 @@
     "website": "https://www.instagram.com/howland_cultural_center/",
     "bloomberg_uuid": "5d6f335b-5145-43de-8f55-3876ad5ee262",
     "lat": 41.50179199999999,
-    "lng": -73.96484629999999
+    "lng": -73.96484629999999,
+    "address": "477 Main Street, City of Beacon, New York 12508"
   },
   {
     "name": "Hudson Hall",
@@ -2087,7 +2155,8 @@
     "website": "https://www.instagram.com/hudsonhallny/",
     "bloomberg_uuid": "d9898594-3dad-437f-ab1f-aa55ab60ff80",
     "lat": 42.2528649,
-    "lng": -73.790959
+    "lng": -73.790959,
+    "address": "306-308 Warren Street, City of Hudson, New York 12534"
   },
   {
     "name": "Hudson Valley MOCA",
@@ -2115,7 +2184,8 @@
     "website": "http://www.peekskillart.com",
     "bloomberg_uuid": "5e61a106-d73e-4564-8d12-e61c2c3bc6b2",
     "lat": 41.29327199999999,
-    "lng": -73.90687729999999
+    "lng": -73.90687729999999,
+    "address": "1701 Main Street, City of Peekskill, New York 10566"
   },
   {
     "name": "Hudson Valley Seed Company",
@@ -2150,7 +2220,8 @@
     "website": "https://www.instagram.com/hudsonvalleyseedco/",
     "bloomberg_uuid": "45836566-da3e-4244-a89f-2f3ec5e3033b",
     "lat": 41.8039689,
-    "lng": -74.2098922
+    "lng": -74.2098922,
+    "address": "12 Airport Road, Accord, New York 12404"
   },
   {
     "name": "Interlude Artist Residency",
@@ -2177,13 +2248,14 @@
     "website": "https://www.instagram.com/interluderesidency/",
     "bloomberg_uuid": "f94f1395-6b49-49cd-b921-fd71df975b3a",
     "lat": 42.14889360000001,
-    "lng": -73.73969699999999
+    "lng": -73.73969699999999,
+    "address": "171 Old Route 82, City of Hudson, New York 12534"
   },
   {
     "name": "International Museum of Dinnerware Design",
     "location": "Hudson, NY",
     "town": "Hudson",
-    "blurb": "Two exhibitions \u2014 Ashtray and Dining Grails \u2014 curated by Margaret Carney, celebrate dining and dinnerware through contemporary art and industrial design across all media.",
+    "blurb": "Two exhibitions — Ashtray and Dining Grails — curated by Margaret Carney, celebrate dining and dinnerware through contemporary art and industrial design across all media.",
     "show": "",
     "aesthetics": [
       "contemporary",
@@ -2206,7 +2278,8 @@
     "website": "https://www.instagram.com/DinnerwareMuseum/",
     "bloomberg_uuid": "3f684ecd-0cfa-44cf-b6f1-834a9d08f552",
     "lat": 41.9283584,
-    "lng": -74.00085229999999
+    "lng": -74.00085229999999,
+    "address": "524 Broadway, City of Kingston, New York 12401"
   },
   {
     "name": "Jack Shainman Gallery / The School",
@@ -2236,7 +2309,8 @@
     "website": "https://www.instagram.com/jackshainman/",
     "bloomberg_uuid": "bd621be8-4675-41f8-85ad-73f0a5000483",
     "lat": 42.3929896,
-    "lng": -73.7013068
+    "lng": -73.7013068,
+    "address": "25 Broad Street, Village of Kinderhook, New York 12106"
   },
   {
     "name": "Jacob Burns Film Center",
@@ -2263,7 +2337,8 @@
     "website": "http://burnsfilmcenter.org",
     "bloomberg_uuid": "0d30481f-d9b9-43db-885d-753bd844f1a4",
     "lat": 41.1351022,
-    "lng": -73.79171699999999
+    "lng": -73.79171699999999,
+    "address": "364 Manville Road, Village of Pleasantville, New York 10570"
   },
   {
     "name": "Jane St. Art",
@@ -2294,7 +2369,8 @@
     "website": "https://www.instagram.com/janestreetart/",
     "bloomberg_uuid": "6fc76664-2881-4c75-9835-b904994d2e89",
     "lat": 42.0771251,
-    "lng": -73.9529045
+    "lng": -73.9529045,
+    "address": "13 Jane Street, Village of Saugerties, New York 12477"
   },
   {
     "name": "John Cage Trust / Bard Library",
@@ -2323,7 +2399,8 @@
     "website": "https://www.instagram.com/johncagetrust/",
     "bloomberg_uuid": "23dc26e8-a8ca-4c9a-81f5-72324c1ed060",
     "lat": 42.0157161,
-    "lng": -73.91068969999999
+    "lng": -73.91068969999999,
+    "address": "1309 Annandale Road, Town of Red Hook, New York 12571"
   },
   {
     "name": "JW1301 & 1301 Guest House",
@@ -2354,7 +2431,8 @@
     "website": "https://www.instagram.com/jonathanweiskopf/",
     "bloomberg_uuid": "eff59318-903d-48ba-a2ab-0428f752eedd",
     "lat": 42.0498222,
-    "lng": -73.6355284
+    "lng": -73.6355284,
+    "address": "2424 State Highway 82, Town of Ancram, New York 12502"
   },
   {
     "name": "Kaatsbaan Cultural Park",
@@ -2379,7 +2457,8 @@
     "website": "https://www.instagram.com/kaatsbaan/",
     "bloomberg_uuid": "de189a08-8791-4cfd-b05e-8be7c4327153",
     "lat": 42.0557899,
-    "lng": -73.9164428
+    "lng": -73.9164428,
+    "address": "120 Broadway, Town of Red Hook, New York 12583"
   },
   {
     "name": "Katonah Museum of Art",
@@ -2405,7 +2484,8 @@
     "website": "https://www.instagram.com/katonahmuseum/",
     "bloomberg_uuid": "8ec1de1b-13b7-4ec4-923b-abb79829c362",
     "lat": 41.2627274,
-    "lng": -73.6732092
+    "lng": -73.6732092,
+    "address": "134 Jay Street, Town of Bedford, New York 10536"
   },
   {
     "name": "Kayrock Editions",
@@ -2440,13 +2520,14 @@
     "website": "https://www.instagram.com/kayrockscreenprinting/",
     "bloomberg_uuid": "ab7d7bf8-fda2-410f-9b5d-c5b419178f87",
     "lat": 41.753962,
-    "lng": -74.0847606
+    "lng": -74.0847606,
+    "address": "87 North Chestnut Street, Village of New Paltz, New York 12561"
   },
   {
     "name": "KENT FINE ART LLC",
     "location": "Hudson Valley, NY",
     "town": "Hudson Valley",
-    "blurb": "A solo exhibition devoted to Teruko Yokoi (1924\u20132020), the Japanese-American abstract painter who persevered through barriers of race and gender to exhibit at the Palace of the Legion of Honor in 1953.",
+    "blurb": "A solo exhibition devoted to Teruko Yokoi (1924–2020), the Japanese-American abstract painter who persevered through barriers of race and gender to exhibit at the Palace of the Legion of Honor in 1953.",
     "show": "",
     "aesthetics": [
       "abstract",
@@ -2471,7 +2552,8 @@
     "website": "https://www.instagram.com/kentfineart/",
     "bloomberg_uuid": "da9259c5-67d6-4869-9da4-4621c1d72e7c",
     "lat": 41.980327,
-    "lng": -73.660792
+    "lng": -73.660792,
+    "address": "2854 Church Street, Town of Pine Plains, New York 12567"
   },
   {
     "name": "The Kinderhook Knitting Mill",
@@ -2503,7 +2585,8 @@
     "website": "https://www.instagram.com/kinderhookknittingmill/",
     "bloomberg_uuid": "43f46871-7fe5-4cf1-be5c-ac15a5c2acda",
     "lat": 42.3947528,
-    "lng": -73.6983868
+    "lng": -73.6983868,
+    "address": "2 Hudson Street, Village of Kinderhook, New York 12106"
   },
   {
     "name": "Kingsland Editions",
@@ -2532,7 +2615,8 @@
     "website": "https://www.instagram.com/kingslandeditions/",
     "bloomberg_uuid": "1862f4a4-36c3-4f2a-acf7-e691c0caedac",
     "lat": 41.8278707,
-    "lng": -73.9651379
+    "lng": -73.9651379,
+    "address": "61 Main Street, Town of Esopus, New York 12429"
   },
   {
     "name": "KinoSaito Art Center",
@@ -2557,13 +2641,14 @@
     "website": "http://kinosaito.org",
     "bloomberg_uuid": "7e1387eb-8ab2-4dfe-bbe6-4a9366a6826b",
     "lat": 42.0584242,
-    "lng": -73.9093003
+    "lng": -73.9093003,
+    "address": "58 Broadway, Town of Red Hook, New York 12583"
   },
   {
     "name": "Ligenza Moore Gallery",
     "location": "Saugerties, NY",
     "town": "Saugerties",
-    "blurb": "Distant Lands is a group exhibition featuring James Biederman, Katherine Bradford, Chris Martin, Judy Pfaff, and others \u2014 bold painters and sculptors working across abstract and landscape registers.",
+    "blurb": "Distant Lands is a group exhibition featuring James Biederman, Katherine Bradford, Chris Martin, Judy Pfaff, and others — bold painters and sculptors working across abstract and landscape registers.",
     "show": "Distant Lands",
     "aesthetics": [
       "abstract",
@@ -2598,7 +2683,8 @@
     "website": "https://www.instagram.com/ligenzamooregallery/",
     "bloomberg_uuid": "4b94ab3e-9a96-4e69-80be-718de4627060",
     "lat": 42.0775906,
-    "lng": -73.95291259999999
+    "lng": -73.95291259999999,
+    "address": "243 Main Street, Village of Saugerties, New York 12477"
   },
   {
     "name": "lite brite neon studio x queer|art",
@@ -2633,7 +2719,8 @@
     "website": "https://www.instagram.com/litebriteneon/",
     "bloomberg_uuid": "d1550e0d-023f-4082-8f16-cf97e524cf08",
     "lat": 42.2528649,
-    "lng": -73.790959
+    "lng": -73.790959,
+    "address": "306-308 Warren Street, City of Hudson, New York 12534"
   },
   {
     "name": "Loading... Invitational",
@@ -2657,7 +2744,8 @@
     "website": "https://www.instagram.com/loading.invitational",
     "bloomberg_uuid": "bbface83-66f1-4e3c-a0f0-63053524306f",
     "lat": 41.9209018,
-    "lng": -73.9612887
+    "lng": -73.9612887,
+    "address": "Kingston Point Rail Trail, City of Kingston, New York 12574"
   },
   {
     "name": "LOOM",
@@ -2680,7 +2768,8 @@
     "website": "",
     "bloomberg_uuid": "1ae38d21-5107-422c-8e7f-9d32344724fe",
     "lat": 42.248421,
-    "lng": -73.653176
+    "lng": -73.653176,
+    "address": "Prospect Street, Village of Philmont, New York 12565"
   },
   {
     "name": "Lyndhurst Mansion & Gardens",
@@ -2711,7 +2800,8 @@
     "website": "http://www.lyndhurst.org",
     "bloomberg_uuid": "bc31b44d-3f1a-4878-a5b3-e745cb0cb307",
     "lat": 41.05399999999999,
-    "lng": -73.8673752
+    "lng": -73.8673752,
+    "address": "635 South Broadway, Village of Tarrytown, New York 10591"
   },
   {
     "name": "Lynn & Lorraine with Tulsa Artist Fellowship",
@@ -2743,14 +2833,15 @@
     "website": "",
     "bloomberg_uuid": "1c191b95-3ede-4dc4-9ed0-20e0d2cabf56",
     "lat": 41.9209018,
-    "lng": -73.9612887
+    "lng": -73.9612887,
+    "address": "Kingston Point Rail Trail, City of Kingston, New York 12574"
   },
   {
     "name": "Magazzino Italian Art",
     "location": "Cold Spring, NY",
     "town": "Cold Spring",
     "blurb": "Magazzino's permanent Arte Povera installation offers a dynamic journey through postwar Italian art, with seminal works by artists who transformed everyday materials into powerful conceptual gestures.",
-    "show": "Arte Povera \u2014 Permanent Exhibition",
+    "show": "Arte Povera — Permanent Exhibition",
     "aesthetics": [
       "modern",
       "contemporary",
@@ -2773,7 +2864,8 @@
     "website": "https://www.instagram.com/magazzino.nyc/",
     "bloomberg_uuid": "b649dcd1-0d4e-4e7d-a440-601c34a1f8d5",
     "lat": 41.429749,
-    "lng": -73.914816
+    "lng": -73.914816,
+    "address": "Albany Post Road, Nelson Corners, New York 10516"
   },
   {
     "name": "Manitoga / The Russel Wright Design Center",
@@ -2827,13 +2919,14 @@
     "website": "http://mariaveraskincare.com",
     "bloomberg_uuid": "647435b8-c1dd-4aba-b0e1-c63bda5c8919",
     "lat": 41.9338408,
-    "lng": -74.0191567
+    "lng": -74.0191567,
+    "address": "John Street, City of Kingston, New York 12401"
   },
   {
     "name": "Marly Hammer + Jasper Richmus: The Mall",
     "location": "Hudson Valley, NY",
     "town": "Hudson Valley",
-    "blurb": "THE MALL reclaims vacant mall corridors and storefronts as spaces for wandering, gathering, and experimentation \u2014 an art walk and exhibition series drawing on shared memories of consumer culture.",
+    "blurb": "THE MALL reclaims vacant mall corridors and storefronts as spaces for wandering, gathering, and experimentation — an art walk and exhibition series drawing on shared memories of consumer culture.",
     "show": "THE MALL",
     "aesthetics": [
       "contemporary",
@@ -2853,7 +2946,8 @@
     "website": "https://www.instagram.com/themallupstate/",
     "bloomberg_uuid": "c2589a26-3ca2-491d-bf6c-26d6843e3ef3",
     "lat": 41.9209018,
-    "lng": -73.9612887
+    "lng": -73.9612887,
+    "address": "Kingston Point Rail Trail, City of Kingston, New York 12574"
   },
   {
     "name": "Material Projects Space",
@@ -2885,13 +2979,14 @@
     "website": "https://www.instagram.com/material_projects/",
     "bloomberg_uuid": "b5e565b6-1a81-4375-8e6a-d21c627f827f",
     "lat": 41.7162575,
-    "lng": -74.3935918
+    "lng": -74.3935918,
+    "address": "6 Market Street, Village of Ellenville, New York 12428"
   },
   {
     "name": "Mendes Wood DM",
     "location": "Hudson Valley, NY",
     "town": "Hudson Valley",
-    "blurb": "Three debut solo exhibitions by Lotus L. Kang, Kenji Ide, and Precious Okoyomon \u2014 internationally recognized artists whose practices span installation, sculpture, and ecological inquiry.",
+    "blurb": "Three debut solo exhibitions by Lotus L. Kang, Kenji Ide, and Precious Okoyomon — internationally recognized artists whose practices span installation, sculpture, and ecological inquiry.",
     "show": "",
     "aesthetics": [
       "contemporary",
@@ -2917,7 +3012,8 @@
     "website": "http://www.mendeswooddm.com",
     "bloomberg_uuid": "616557d9-7820-459c-9142-078e000aca74",
     "lat": 42.1318202,
-    "lng": -73.8806622
+    "lng": -73.8806622,
+    "address": "10 Church Avenue, Town of Germantown, New York 12526"
   },
   {
     "name": "Millbrook Arts Group",
@@ -2943,7 +3039,8 @@
     "website": "https://www.instagram.com/millbrookartsgroup/",
     "bloomberg_uuid": "3be97eb2-41df-4734-8d1d-ef371ba13111",
     "lat": 41.7850937,
-    "lng": -73.6940175
+    "lng": -73.6940175,
+    "address": "3280 Franklin Avenue, Village of Millbrook, New York 12545"
   },
   {
     "name": "Mother-in-Law's",
@@ -2972,7 +3069,8 @@
     "website": "https://www.instagram.com/motherinlawsart/",
     "bloomberg_uuid": "2679b5af-9c1d-4b65-8d3b-a2c50f6eb27a",
     "lat": 42.1791316,
-    "lng": -73.5257192
+    "lng": -73.5257192,
+    "address": "2633 State Highway 23, Town of Hillsdale, New York 12529"
   },
   {
     "name": "N/A Project Space",
@@ -3003,13 +3101,14 @@
     "website": "http://naprojectspace.com",
     "bloomberg_uuid": "0b8659d6-b6d2-441c-bf11-28c6edbf540f",
     "lat": 41.8076237,
-    "lng": -74.0279536
+    "lng": -74.0279536,
+    "address": "137 Martin Sweedes Road, Town of New Paltz, New York 12561"
   },
   {
     "name": "Nervous System",
     "location": "Rhinebeck, NY",
     "town": "Rhinebeck",
-    "blurb": "Technology in the Woods presents artists working with computational systems and materials experimentation \u2014 from radiolarian-inspired sculptures to intricate wooden puzzles and large-scale biologically informed metal fabrication.",
+    "blurb": "Technology in the Woods presents artists working with computational systems and materials experimentation — from radiolarian-inspired sculptures to intricate wooden puzzles and large-scale biologically informed metal fabrication.",
     "show": "Technology in the Woods",
     "aesthetics": [
       "contemporary",
@@ -3032,13 +3131,14 @@
     "website": "https://www.instagram.com/nervous.system/",
     "bloomberg_uuid": "b84059f8-2f9c-48a7-88e8-f63bdba59af3",
     "lat": 41.9270506,
-    "lng": -73.9094272
+    "lng": -73.9094272,
+    "address": "75 East Market Street, Village of Rhinebeck, New York 12572"
   },
   {
     "name": "Olana State Historic Site",
     "location": "Hudson, NY",
     "town": "Hudson",
-    "blurb": "Olana's 250-acre artist-designed landscape \u2014 with five miles of carriage roads and a Persian-inspired house \u2014 offers panoramic views of the Hudson River and Catskill Mountains.",
+    "blurb": "Olana's 250-acre artist-designed landscape — with five miles of carriage roads and a Persian-inspired house — offers panoramic views of the Hudson River and Catskill Mountains.",
     "show": "",
     "aesthetics": [
       "modern",
@@ -3055,7 +3155,8 @@
     "website": "http://www.OLANA.org",
     "bloomberg_uuid": "80aa5848-fd1b-4e73-b02b-cde9cbe27f75",
     "lat": 42.2171588,
-    "lng": -73.8293396
+    "lng": -73.8293396,
+    "address": "Olana Historic Site Sthy, New York"
   },
   {
     "name": "Open Space",
@@ -3091,13 +3192,14 @@
     "website": "https://www.instagram.com/openspace_stoneridge/",
     "bloomberg_uuid": "66a48191-194b-4b30-be99-ff359299ff45",
     "lat": 41.84087419999999,
-    "lng": -74.15243939999999
+    "lng": -74.15243939999999,
+    "address": "3938 Main Street, Stone Ridge, New York 12484"
   },
   {
     "name": "Ornamentum",
     "location": "Hudson, NY",
     "town": "Hudson",
-    "blurb": "The Remains of the Gay presents new work by New York multidisciplinary artist Samuel Gassman \u2014 hand-sewn flags, rag jewels, and antique jewel assemblages examining American politics and queer cultural legacy.",
+    "blurb": "The Remains of the Gay presents new work by New York multidisciplinary artist Samuel Gassman — hand-sewn flags, rag jewels, and antique jewel assemblages examining American politics and queer cultural legacy.",
     "show": "The Remains of the Gay",
     "aesthetics": [
       "contemporary",
@@ -3151,7 +3253,8 @@
     "website": "https://www.instagram.com/peep_space/",
     "bloomberg_uuid": "f13b7e4f-135a-4467-8049-f439b663334e",
     "lat": 41.07841639999999,
-    "lng": -73.8615914
+    "lng": -73.8615914,
+    "address": "92 Central Avenue, Village of Tarrytown, New York 10591"
   },
   {
     "name": "Pictorial Foundation",
@@ -3183,7 +3286,8 @@
     "website": "https://www.instagram.com/pictorialfoundation/",
     "bloomberg_uuid": "d8631add-c2a9-416b-aa99-65daf9e8ae51",
     "lat": 42.2173102,
-    "lng": -73.8645734
+    "lng": -73.8645734,
+    "address": "320 Main Street, Village of Catskill, New York 12414"
   },
   {
     "name": "PS21 : Center for Contemporary Performance",
@@ -3209,7 +3313,8 @@
     "website": "https://www.instagram.com/ps21chatham/",
     "bloomberg_uuid": "b08f26e3-471a-420b-9f18-6ad775c0fc3a",
     "lat": 42.3750152,
-    "lng": -73.6062922
+    "lng": -73.6062922,
+    "address": "State Highway 66, Town of Chatham, New York 12136"
   },
   {
     "name": "PUF Studios Community Printmaking Studio at the Poughkeepsie Underwear Factory",
@@ -3243,7 +3348,8 @@
     "website": "https://www.hudsonriverhousing.org/pufstudios",
     "bloomberg_uuid": "f4571ead-3c30-4aea-b797-b3b965d5635c",
     "lat": 41.7014325,
-    "lng": -73.9179506
+    "lng": -73.9179506,
+    "address": "8 North Cherry Street, City of Poughkeepsie, New York 12601"
   },
   {
     "name": "Raphael Moser Gallery",
@@ -3274,7 +3380,8 @@
     "website": "https://www.raphaelmosergallery.com",
     "bloomberg_uuid": "61bfe15a-f060-4b79-888c-7eb79d9cd4b6",
     "lat": 41.9209018,
-    "lng": -73.9612887
+    "lng": -73.9612887,
+    "address": "Kingston Point Rail Trail, City of Kingston, New York 12574"
   },
   {
     "name": "RAVENWOOD",
@@ -3303,13 +3410,14 @@
     "website": "https://www.instagram.com/ravenwoodny/",
     "bloomberg_uuid": "db573805-43fb-489c-a87d-5fc579dbd309",
     "lat": 43.2066947,
-    "lng": -74.106797
+    "lng": -74.106797,
+    "address": "88 Butternut Hill, Town of Edinburg, New York 12134"
   },
   {
     "name": "River Valley Arts Collective",
     "location": "Beacon, NY",
     "town": "Beacon",
-    "blurb": "A solo exhibition by Julianne Swartz, curated by Liz Munsell, featuring large ceramic vessels and works in copper filament \u2014 paired sculptures animated with resonant frequencies.",
+    "blurb": "A solo exhibition by Julianne Swartz, curated by Liz Munsell, featuring large ceramic vessels and works in copper filament — paired sculptures animated with resonant frequencies.",
     "show": "",
     "aesthetics": [
       "contemporary",
@@ -3332,7 +3440,8 @@
     "website": "http://rvacollective.org",
     "bloomberg_uuid": "047e88ea-8eb8-4766-9cfc-672a553b6333",
     "lat": 41.5048158,
-    "lng": -73.9695832
+    "lng": -73.9695832,
+    "address": "320 Main Street, City of Beacon, New York 12508"
   },
   {
     "name": "Rohmer Gallery",
@@ -3370,7 +3479,8 @@
     "website": "https://www.instagram.com/jillebenson/",
     "bloomberg_uuid": "a10c4d62-d4b8-4575-80f3-b015902d736c",
     "lat": 42.0773337,
-    "lng": -73.9523995
+    "lng": -73.9523995,
+    "address": "84 Partition Street, Village of Saugerties, New York 12477"
   },
   {
     "name": "Roost Arts Hudson Valley",
@@ -3400,13 +3510,14 @@
     "website": "https://www.instagram.com/roostartshudsonvalley/",
     "bloomberg_uuid": "3caf970d-f506-4110-8e94-f5566e3ef051",
     "lat": 41.7477537,
-    "lng": -74.083635
+    "lng": -74.083635,
+    "address": "122 Main Street, Village of New Paltz, New York 12561"
   },
   {
     "name": "Rural Projects",
     "location": "Gallatin, NY",
     "town": "Gallatin",
-    "blurb": "Route 11, a recently refurbished site-specific work by Martine Kaczynski \u2014 a replica gas station canopy sited along County Route 11 \u2014 marks the inaugural Rural Projects artist residency commission from 2007.",
+    "blurb": "Route 11, a recently refurbished site-specific work by Martine Kaczynski — a replica gas station canopy sited along County Route 11 — marks the inaugural Rural Projects artist residency commission from 2007.",
     "show": "Route 11",
     "aesthetics": [
       "contemporary",
@@ -3430,7 +3541,8 @@
     "website": "http://ruralprojects.org",
     "bloomberg_uuid": "77a5f6a4-5b05-4b21-aefa-8eb10c4d2c39",
     "lat": 42.0650965,
-    "lng": -73.7242486
+    "lng": -73.7242486,
+    "address": "Taconic State Parkway, New York 12523"
   },
   {
     "name": "RUTHANN",
@@ -3467,13 +3579,14 @@
     "website": "https://www.instagram.com/ruthanngallery/",
     "bloomberg_uuid": "339fe2e5-9f82-4ce2-bee5-6a8f74dcf880",
     "lat": 42.2528649,
-    "lng": -73.790959
+    "lng": -73.790959,
+    "address": "306-308 Warren Street, City of Hudson, New York 12534"
   },
   {
     "name": "Savage Wonderground",
     "location": "Hudson Valley, NY",
     "town": "Hudson Valley",
-    "blurb": "Savage/Wonder II features fifteen artists whose practices are shaped by service \u2014 military veterans, first responders, and their immediate family members \u2014 exploring nature's ferocity and serenity.",
+    "blurb": "Savage/Wonder II features fifteen artists whose practices are shaped by service — military veterans, first responders, and their immediate family members — exploring nature's ferocity and serenity.",
     "show": "Savage/Wonder II",
     "aesthetics": [
       "contemporary",
@@ -3497,7 +3610,8 @@
     "website": "https://www.instagram.com/savagewonderground/",
     "bloomberg_uuid": "971e499e-64f5-49a7-958e-47d2e8a2e329",
     "lat": 41.9209018,
-    "lng": -73.9612887
+    "lng": -73.9612887,
+    "address": "Kingston Point Rail Trail, City of Kingston, New York 12574"
   },
   {
     "name": "SEPTEMBER",
@@ -3528,7 +3642,8 @@
     "website": "https://www.instagram.com/septembergallery/",
     "bloomberg_uuid": "c53b7d36-90d7-492b-94c9-fc4a2fa4466a",
     "lat": 41.5048158,
-    "lng": -73.9695832
+    "lng": -73.9695832,
+    "address": "320 Main Street, City of Beacon, New York 12508"
   },
   {
     "name": "Shadow Walls",
@@ -3565,7 +3680,8 @@
     "website": "https://www.instagram.com/shadow_walls/",
     "bloomberg_uuid": "f33e9d19-f240-4c93-ab87-c1d7fcd6553b",
     "lat": 42.2834937,
-    "lng": -74.000518
+    "lng": -74.000518,
+    "address": "446 Silver Spur Road West, Town of Cairo, New York 12470"
   },
   {
     "name": "Shaker Museum",
@@ -3596,7 +3712,8 @@
     "website": "https://www.instagram.com/shakermuseum/",
     "bloomberg_uuid": "14533148-5249-4f1c-97c9-87c233ebe796",
     "lat": 42.4504007,
-    "lng": -73.5845385
+    "lng": -73.5845385,
+    "address": "285 Shaker Museum Road, Town of Chatham, New York 12136"
   },
   {
     "name": "Shigeko Kubota Video Art Foundation",
@@ -3627,7 +3744,8 @@
     "website": "https://www.instagram.com/skvaf/",
     "bloomberg_uuid": "e4c00cc3-fd34-4063-a762-ee362de313c3",
     "lat": 41.5048158,
-    "lng": -73.9695832
+    "lng": -73.9695832,
+    "address": "320 Main Street, City of Beacon, New York 12508"
   },
   {
     "name": "Show: Room",
@@ -3655,7 +3773,8 @@
     "website": "http://showroomhudson.com",
     "bloomberg_uuid": "da0f4ad5-0312-43af-a324-ad34cb74299c",
     "lat": 42.25035949999999,
-    "lng": -73.78176979999999
+    "lng": -73.78176979999999,
+    "address": "549 Washington Street, City of Hudson, New York 12534"
   },
   {
     "name": "Sky High Farm",
@@ -3679,7 +3798,8 @@
     "website": "https://www.instagram.com/skyhighfarmhudsonvalley/",
     "bloomberg_uuid": "6186c099-1617-4047-87da-6906ed105604",
     "lat": 42.0020361,
-    "lng": -73.64107179999999
+    "lng": -73.64107179999999,
+    "address": "675 Hall Hill Road, Town of Pine Plains, New York 12567"
   },
   {
     "name": "SoMad x Upstate Films",
@@ -3703,7 +3823,8 @@
     "website": "http://somad.nyc",
     "bloomberg_uuid": "9305d911-b8c0-4f54-9c70-bad608c574a2",
     "lat": 41.9270506,
-    "lng": -73.9094272
+    "lng": -73.9094272,
+    "address": "75 East Market Street, Village of Rhinebeck, New York 12572"
   },
   {
     "name": "Sometimes Gallery",
@@ -3761,7 +3882,8 @@
     "website": "https://www.instagram.com/sayantanmaitraboka/",
     "bloomberg_uuid": "be01f107-8991-46ab-bce9-281ee64ba868",
     "lat": 41.5048158,
-    "lng": -73.9695832
+    "lng": -73.9695832,
+    "address": "320 Main Street, City of Beacon, New York 12508"
   },
   {
     "name": "Space Clover Arts",
@@ -3792,7 +3914,8 @@
     "website": "http://www.spaceclover.org",
     "bloomberg_uuid": "1f90d4c8-e0f5-44e6-908b-73b51383942b",
     "lat": 41.9209018,
-    "lng": -73.9612887
+    "lng": -73.9612887,
+    "address": "Kingston Point Rail Trail, City of Kingston, New York 12574"
   },
   {
     "name": "Sqrypt Atelier: Inn Way Art Co-op",
@@ -3820,7 +3943,8 @@
     "website": "https://www.instagram.com/sqrypt_atelier/",
     "bloomberg_uuid": "3b67435c-4529-41f2-a093-728802b22fe1",
     "lat": 41.7170833,
-    "lng": -74.39284359999999
+    "lng": -74.39284359999999,
+    "address": "130 Bogardus Place, Village of Ellenville, New York 12428"
   },
   {
     "name": "Station",
@@ -3855,13 +3979,14 @@
     "website": "https://www.instagram.com/thestation_nyc/",
     "bloomberg_uuid": "ab2088f4-2fda-4e4e-b835-e3051cb5de0d",
     "lat": 42.6952028,
-    "lng": -73.7262789
+    "lng": -73.7262789,
+    "address": "Railroad Avenue, Town of Colonie, New York 12204"
   },
   {
     "name": "Stony Kill Studios",
     "location": "Wappingers Falls, NY",
     "town": "Wappingers Falls",
-    "blurb": "Hey, Friend brings together over 20 Hudson Valley artists \u2014 all members of the Hudson Valley Studio Group founded by Courtney Puckett \u2014 in an exhibition about connection and community.",
+    "blurb": "Hey, Friend brings together over 20 Hudson Valley artists — all members of the Hudson Valley Studio Group founded by Courtney Puckett — in an exhibition about connection and community.",
     "show": "Hey, Friend",
     "aesthetics": [
       "contemporary"
@@ -3884,7 +4009,8 @@
     "website": "https://www.instagram.com/stonykillstudios/",
     "bloomberg_uuid": "727976f2-2f53-4f42-aa90-cf32f7cb5bde",
     "lat": 41.5544474,
-    "lng": -73.9332317
+    "lng": -73.9332317,
+    "address": "130 Stoneykill Road, Myers Corner, New York 12590"
   },
   {
     "name": "Storm King Art Center",
@@ -3917,7 +4043,8 @@
     "website": "https://www.instagram.com/stormkingartcenter/",
     "bloomberg_uuid": "9d96e28a-e4d9-4404-a10d-f091bf687291",
     "lat": 41.4233906,
-    "lng": -74.0622764
+    "lng": -74.0622764,
+    "address": "Town of Cornwall, New York 12518"
   },
   {
     "name": "STRONGROOM: Soto",
@@ -3947,7 +4074,8 @@
     "website": "https://www.instagram.com/strongroom.inc/",
     "bloomberg_uuid": "8ab8f658-76f0-42e7-8680-518887ba1290",
     "lat": 41.5034271,
-    "lng": -74.0104178
+    "lng": -74.0104178,
+    "address": "198 2nd Street, City of Newburgh, New York 12550"
   },
   {
     "name": "STRONGROOM: Young",
@@ -3978,7 +4106,8 @@
     "website": "https://www.instagram.com/strongroom.inc/",
     "bloomberg_uuid": "688ef599-cf06-4ade-8d2f-26f47587622b",
     "lat": 41.5235115,
-    "lng": -74.11389299999999
+    "lng": -74.11389299999999,
+    "address": "254 NY 17K, City of Newburgh, New York 12550"
   },
   {
     "name": "Studio Tashtego",
@@ -4007,7 +4136,8 @@
     "website": "https://www.instagram.com/studio_tashtego/",
     "bloomberg_uuid": "60333986-c64b-43dd-8779-93fb0c9007ee",
     "lat": 41.4192908,
-    "lng": -73.9563944
+    "lng": -73.9563944,
+    "address": "158 Main Street, Village of Cold Spring, New York 10516"
   },
   {
     "name": "Sunfair",
@@ -4033,7 +4163,8 @@
     "website": "https://www.instagram.com/thesunfair/",
     "bloomberg_uuid": "df1d004a-cd33-43fe-b384-fbe6b612186f",
     "lat": 42.1615585,
-    "lng": -73.8038649
+    "lng": -73.8038649,
+    "address": "210 Cold Spring Road, City of Hudson, New York 12534"
   },
   {
     "name": "T Space",
@@ -4061,7 +4192,8 @@
     "website": "https://www.instagram.com/openspace_stoneridge/",
     "bloomberg_uuid": "66a48191-194b-4b30-be99-ff359299ff45",
     "lat": 42.21460709999999,
-    "lng": -73.95949399999999
+    "lng": -73.95949399999999,
+    "address": "88 Ufferts Road, Town of Catskill, New York 12414"
   },
   {
     "name": "Tanja Grunert Gallery",
@@ -4093,7 +4225,8 @@
     "website": "http://catherinemctague.com",
     "bloomberg_uuid": "0c5ab697-9f4b-4727-bdc8-eb39a531404b",
     "lat": 42.2453036,
-    "lng": -73.7787429
+    "lng": -73.7787429,
+    "address": "21 Prospect Avenue, City of Hudson, New York 12534"
   },
   {
     "name": "Tannersville Works",
@@ -4125,7 +4258,8 @@
     "website": "https://www.instagram.com/tannersville_works/",
     "bloomberg_uuid": "c4e7b728-3ece-4cc0-945d-463f0b7d6868",
     "lat": 42.1956094,
-    "lng": -74.1349256
+    "lng": -74.1349256,
+    "address": "6041 Main Street, Village of Tannersville, New York 12485"
   },
   {
     "name": "Ten Barn Farm",
@@ -4153,7 +4287,8 @@
     "website": "https://www.instagram.com/tenbarnfarm/",
     "bloomberg_uuid": "14bf01aa-94d5-4a5c-bc0c-2d9c4a14ce34",
     "lat": 42.3206364,
-    "lng": -73.68999529999999
+    "lng": -73.68999529999999,
+    "address": "1142 Stockport Road, Town of Ghent, New York 12075"
   },
   {
     "name": "The 108",
@@ -4185,13 +4320,14 @@
     "website": "https://thestainlab.com/",
     "bloomberg_uuid": "b4013383-9af2-4c1d-b318-d8a84c69e1c5",
     "lat": 41.9209018,
-    "lng": -73.9612887
+    "lng": -73.9612887,
+    "address": "Kingston Point Rail Trail, City of Kingston, New York 12574"
   },
   {
     "name": "The Barn on Berme",
     "location": "Kerhonkson, NY",
     "town": "Kerhonkson",
-    "blurb": "FIRE transforms a 1920s stable into a site-specific art event with ten internationally recognized artists creating solo exhibitions for the Year of the Fire Horse \u2014 the fourth edition of this ambitious program.",
+    "blurb": "FIRE transforms a 1920s stable into a site-specific art event with ten internationally recognized artists creating solo exhibitions for the Year of the Fire Horse — the fourth edition of this ambitious program.",
     "show": "FIRE",
     "aesthetics": [
       "contemporary",
@@ -4214,7 +4350,8 @@
     "website": "https://www.instagram.com/thebarnonberme/",
     "bloomberg_uuid": "76e2a1b9-01e8-4dc0-b2e9-bedc1defbd66",
     "lat": 41.7702702,
-    "lng": -74.25695089999999
+    "lng": -74.25695089999999,
+    "address": "340 Granite Road, Accord, New York 12446"
   },
   {
     "name": "The Campus Upstate",
@@ -4243,7 +4380,8 @@
     "website": "https://www.instagram.com/thecampusupstate/",
     "bloomberg_uuid": "e2e87ce2-09a1-4777-80c7-bc7c2df355a1",
     "lat": 42.23816230000001,
-    "lng": -73.6928843
+    "lng": -73.6928843,
+    "address": "350 State Highway 217, City of Hudson, New York 12534"
   },
   {
     "name": "The Capa Space",
@@ -4273,13 +4411,14 @@
     "website": "https://www.instagram.com/thecapaspace/",
     "bloomberg_uuid": "d4eb06e0-63dd-42c2-b449-867358049832",
     "lat": 41.7055897,
-    "lng": -73.9283885
+    "lng": -73.9283885,
+    "address": "40 Civic Center Plaza, City of Poughkeepsie, New York 12601"
   },
   {
     "name": "The Church in Staatsburg",
     "location": "Staatsburg, NY",
     "town": "Staatsburg",
-    "blurb": "Artist Books of Loss and Healing brings together artist books centered on love, loss, grief, and healing \u2014 spanning tenderness, sorrow, and the love that makes grief possible.",
+    "blurb": "Artist Books of Loss and Healing brings together artist books centered on love, loss, grief, and healing — spanning tenderness, sorrow, and the love that makes grief possible.",
     "show": "Artist Books of Loss and Healing",
     "aesthetics": [
       "contemporary",
@@ -4301,7 +4440,8 @@
     "website": "https://www.instagram.com/thechurchstaatsburg/",
     "bloomberg_uuid": "a4fdc185-0f65-43ef-98f6-4ca810e68a52",
     "lat": 41.8488689,
-    "lng": -73.9292129
+    "lng": -73.9292129,
+    "address": "59 Old Post Road, Town of Hyde Park, New York 12580"
   },
   {
     "name": "The Department of Things",
@@ -4331,7 +4471,8 @@
     "website": "https://www.instagram.com/thedepartmentofthings/",
     "bloomberg_uuid": "82692398-b63f-45d7-b84d-15363795f012",
     "lat": 41.916709,
-    "lng": -73.9871291
+    "lng": -73.9871291,
+    "address": "115 Abeel Street, City of Kingston, New York 12417"
   },
   {
     "name": "The Dorsky Museum of Art",
@@ -4362,7 +4503,8 @@
     "website": "https://www.newpaltz.edu/museum/",
     "bloomberg_uuid": "f92199b6-2685-4e05-a9ad-beaf7c5243c0",
     "lat": 41.7412498,
-    "lng": -74.0834277
+    "lng": -74.0834277,
+    "address": "35 Hawk Drive, Village of New Paltz, New York 12561"
   },
   {
     "name": "The Gallery at Citiot",
@@ -4392,7 +4534,8 @@
     "website": "https://www.instagram.com/nycitiot/",
     "bloomberg_uuid": "9010a7ee-3ddc-43c7-a335-8a1c10eeae6b",
     "lat": 42.2199477,
-    "lng": -73.86561429999999
+    "lng": -73.86561429999999,
+    "address": "404 Main Street, Village of Catskill, New York 12414"
   },
   {
     "name": "The Gallery at Yellow Studio",
@@ -4421,7 +4564,8 @@
     "website": "https://www.instagram.com/yellowstudionygallery/",
     "bloomberg_uuid": "843b42de-1fbd-48dd-9f5e-0f2b788fdcf7",
     "lat": 41.2631556,
-    "lng": -73.6133531
+    "lng": -73.6133531,
+    "address": "779 Cross River Road, Town of Lewisboro, New York 10518"
   },
   {
     "name": "The Hudson Hangar x Gray Nivas",
@@ -4449,13 +4593,14 @@
     "website": "https://www.instagram.com/hudsonhangar/",
     "bloomberg_uuid": "e72c4aea-8a9c-4601-8aec-19ec595d3cec",
     "lat": 41.7748155,
-    "lng": -74.2982059
+    "lng": -74.2982059,
+    "address": "6331 42nd Street, Kerhonkson, New York 12446"
   },
   {
     "name": "The Pal Collaborative",
     "location": "Hudson Valley, NY",
     "town": "Hudson Valley",
-    "blurb": "Assemblies of Meaning features Elizabeth Vel\u00e1zquez, Nadia Martinez, Leonor Mendoza, and Carlos Mendoza exploring how meaning emerges through making and relationship through sculpture, painting, installation, and drawing.",
+    "blurb": "Assemblies of Meaning features Elizabeth Velázquez, Nadia Martinez, Leonor Mendoza, and Carlos Mendoza exploring how meaning emerges through making and relationship through sculpture, painting, installation, and drawing.",
     "show": "Assemblies of Meaning",
     "aesthetics": [
       "contemporary",
@@ -4469,7 +4614,7 @@
       "works_on_paper"
     ],
     "artists": [
-      "Elizabeth Vel\u00e1zquez",
+      "Elizabeth Velázquez",
       "Nadia Martinez",
       "Leonor Mendoza",
       "Carlos Mendoza"
@@ -4484,7 +4629,8 @@
     "website": "https://www.instagram.com/nowaboutart/",
     "bloomberg_uuid": "f54033c6-3b5c-4d18-ae2a-cac69473eb26",
     "lat": 41.9209018,
-    "lng": -73.9612887
+    "lng": -73.9612887,
+    "address": "Kingston Point Rail Trail, City of Kingston, New York 12574"
   },
   {
     "name": "The Pocantico Center",
@@ -4511,7 +4657,8 @@
     "website": "https://www.instagram.com/pocanticocenter/",
     "bloomberg_uuid": "75ae803a-e64e-46ee-82c9-ae6b0de5d594",
     "lat": 41.0903802,
-    "lng": -73.8419672
+    "lng": -73.8419672,
+    "address": "Westview Circle, Village of Sleepy Hollow, New York 10591"
   },
   {
     "name": "The Post Office",
@@ -4535,7 +4682,8 @@
     "website": "https://katesteciw.me/the-post-offic",
     "bloomberg_uuid": "05f5f042-2427-4549-ae16-410320b77ec6",
     "lat": 41.9209018,
-    "lng": -73.9612887
+    "lng": -73.9612887,
+    "address": "Kingston Point Rail Trail, City of Kingston, New York 12574"
   },
   {
     "name": "The Re Institute",
@@ -4568,7 +4716,8 @@
     "website": "https://www.instagram.com/the_re_instititute/",
     "bloomberg_uuid": "dc569cd0-4f5c-4f26-a5b3-599a123aa794",
     "lat": 41.5048158,
-    "lng": -73.9695832
+    "lng": -73.9695832,
+    "address": "320 Main Street, City of Beacon, New York 12508"
   },
   {
     "name": "The Sphinx x Basilica Hudson",
@@ -4597,7 +4746,8 @@
     "website": "https://www.thesphinxnyc.com/",
     "bloomberg_uuid": "dec3a3fc-3b9d-40a2-b9d5-b65fb495045d",
     "lat": 42.251969,
-    "lng": -73.79873189999999
+    "lng": -73.79873189999999,
+    "address": "110 Front Street, City of Hudson, New York 12534"
   },
   {
     "name": "Thomas Cole National Historic Site",
@@ -4627,13 +4777,14 @@
     "website": "https://www.instagram.com/thomascolesite/",
     "bloomberg_uuid": "33423b9b-1e60-43c1-9ea7-915d0de82c8c",
     "lat": 42.2257729,
-    "lng": -73.86150359999999
+    "lng": -73.86150359999999,
+    "address": "218 Spring Street, Village of Catskill, New York 12414"
   },
   {
     "name": "TRANSART/Gallery @ 107",
     "location": "Hudson Valley, NY",
     "town": "Hudson Valley",
-    "blurb": "Between Idea and Form: Studio Art \u2014 Identity in Process, Community in Practice presents work rooted in lived experience, examining the studio as a space of experimentation and visual language formation.",
+    "blurb": "Between Idea and Form: Studio Art — Identity in Process, Community in Practice presents work rooted in lived experience, examining the studio as a space of experimentation and visual language formation.",
     "show": "Between Idea and Form",
     "aesthetics": [
       "contemporary",
@@ -4657,13 +4808,14 @@
     "website": "https://www.instagram.com/transartny/",
     "bloomberg_uuid": "ad611686-4ca8-4af9-b41a-3cdca90a93c9",
     "lat": 41.9209018,
-    "lng": -73.9612887
+    "lng": -73.9612887,
+    "address": "Kingston Point Rail Trail, City of Kingston, New York 12574"
   },
   {
     "name": "UAW HQ",
     "location": "236 Wall Street Room 103, Kingston, NY 12401",
     "town": "Kingston",
-    "blurb": "Earthen Plot, selected by UAW founder Helen Toomer from over 200 Open Studios participants, brings together 37 artists whose practices are rooted \u2014 physically, spiritually, or intuitively \u2014 in the conditions of place.",
+    "blurb": "Earthen Plot, selected by UAW founder Helen Toomer from over 200 Open Studios participants, brings together 37 artists whose practices are rooted — physically, spiritually, or intuitively — in the conditions of place.",
     "show": "Earthen Plot",
     "aesthetics": [
       "contemporary",
@@ -4687,7 +4839,8 @@
     "website": "https://www.instagram.com/upstateartweekend/",
     "bloomberg_uuid": "c1bba7c7-1e50-4cc3-8875-93788acbf95e",
     "lat": 41.9317384,
-    "lng": -74.0186475
+    "lng": -74.0186475,
+    "address": "236 Wall Street, City of Kingston, New York 12401"
   },
   {
     "name": "Ugly Mud Studio",
@@ -4719,7 +4872,8 @@
     "website": "https://www.instagram.com/uglymudstudio/",
     "bloomberg_uuid": "7c5779fc-e6f1-4c01-adae-bb65e1a28ad4",
     "lat": 42.3346809,
-    "lng": -73.6108611
+    "lng": -73.6108611,
+    "address": "2403 State Route 66, Town of Chatham, New York 12037"
   },
   {
     "name": "Unison Arts",
@@ -4749,7 +4903,8 @@
     "website": "https://www.instagram.com/unison_arts/",
     "bloomberg_uuid": "6831e6c4-f0a1-453a-8eb4-1dcd6b45ff81",
     "lat": 41.7399229,
-    "lng": -74.0603725
+    "lng": -74.0603725,
+    "address": "9 Paradies Lane, Town of New Paltz, New York 12561"
   },
   {
     "name": "UTOPIA",
@@ -4777,7 +4932,8 @@
     "website": "https://www.instagram.com/utopiaupstate/",
     "bloomberg_uuid": "5844e3fb-7aa9-4d2b-a143-434bc77131a3",
     "lat": 41.9352864,
-    "lng": -74.0203441
+    "lng": -74.0203441,
+    "address": "37B North Front Street, City of Kingston, New York 12401"
   },
   {
     "name": "Vallis / SCHOOL ART CENTER",
@@ -4815,7 +4971,8 @@
     "website": "http://schoolcenter.art",
     "bloomberg_uuid": "a2d8e899-6cd5-4093-8576-2fafe866a4b2",
     "lat": 42.2479641,
-    "lng": -73.7806502
+    "lng": -73.7806502,
+    "address": "1 State Street, City of Hudson, New York 12534"
   },
   {
     "name": "VANTAGE POINTS @ Ads Warehouse",
@@ -4843,14 +5000,15 @@
     "website": "https://www.wearevantagepoints.com/upstate-art-weekend-ads",
     "bloomberg_uuid": "4c26db67-161f-4049-88e0-09fb67690482",
     "lat": 41.4989138,
-    "lng": -74.011794
+    "lng": -74.011794,
+    "address": "112 Washington Street, City of Newburgh, New York 12550"
   },
   {
     "name": "Villa Isis",
     "location": "Hudson Valley, NY",
     "town": "Hudson Valley",
-    "blurb": "A Nordic\u2013New York immersive art experience curated in collaboration with Oscar Galleri, Lise Ellingsen, and Katerina Sokolovskaya, transforming Villa Isis and its two-acre property into a living gallery.",
-    "show": "Villa Isis: A Nordic\u2013New York Immersive Art Experience",
+    "blurb": "A Nordic–New York immersive art experience curated in collaboration with Oscar Galleri, Lise Ellingsen, and Katerina Sokolovskaya, transforming Villa Isis and its two-acre property into a living gallery.",
+    "show": "Villa Isis: A Nordic–New York Immersive Art Experience",
     "aesthetics": [
       "contemporary"
     ],
@@ -4870,7 +5028,8 @@
     "website": "https://www.villaisis.com",
     "bloomberg_uuid": "9897aea5-4454-4227-9c77-809b1270890a",
     "lat": 41.5338612,
-    "lng": -74.0836318
+    "lng": -74.0836318,
+    "address": "164 Iris Drive, City of Newburgh, New York 12550"
   },
   {
     "name": "Wassaic Project",
@@ -4901,13 +5060,14 @@
     "website": "https://www.instagram.com/wassaicproject/",
     "bloomberg_uuid": "0cbc3d24-78c9-4455-b499-1bc6563d0c1c",
     "lat": 41.8058471,
-    "lng": -73.5605631
+    "lng": -73.5605631,
+    "address": "37 Furnace Bank Road, Wassaic, New York 12592"
   },
   {
     "name": "Woodstock Artists Association & Museum",
     "location": "Woodstock, NY",
     "town": "Woodstock",
-    "blurb": "A range of exhibitions spanning historic European landscapes, contemporary cityscapes, and immersive installation \u2014 including European Landscapes and Landmarks from the Permanent Collection featuring Woodstock artists.",
+    "blurb": "A range of exhibitions spanning historic European landscapes, contemporary cityscapes, and immersive installation — including European Landscapes and Landmarks from the Permanent Collection featuring Woodstock artists.",
     "show": "European Landscapes and Landmarks from the Permanent Collection",
     "aesthetics": [
       "modern",
@@ -4931,7 +5091,8 @@
     "website": "https://www.instagram.com/waamart/",
     "bloomberg_uuid": "6e9aab9f-c68a-4ea6-b685-2935adc0b4ef",
     "lat": 42.0408333,
-    "lng": -74.11944439999999
+    "lng": -74.11944439999999,
+    "address": "28 Tinker Street, Town of Woodstock, New York 12498"
   },
   {
     "name": "Woodstock School of Art",
@@ -4961,6 +5122,7 @@
     "website": "http://woodstockschoolofart.org",
     "bloomberg_uuid": "3650561b-a861-4a7d-9955-8387aff95338",
     "lat": 42.0409247,
-    "lng": -74.1181971
+    "lng": -74.1181971,
+    "address": "4 Mill Hill Road, Town of Woodstock, New York 12498"
   }
 ]
