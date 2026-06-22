@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Your Upstate Art Weekend · A Gallery Matcher by New to the Wall</title>
+<meta name="description" content="Tell us the art, artists, and mediums you love — and we'll pare down all 160+ Upstate Art Weekend 2026 galleries into a curated, tiered list made for you. A community tool from the New to the Wall Foundation." />
+<meta property="og:title" content="Your Upstate Art Weekend · A Gallery Matcher" />
+<meta property="og:description" content="Curate your own tiered route through Upstate Art Weekend 2026, matched to your taste." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=boska@400,500,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f4efe4'/%3E%3Cpath d='M8 23V9h3l5 9V9h3v14h-3l-5-9v9z' fill='%235e6b54'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+</head>
+<body>
+<a class="sr-only" href="#matcher">Skip to the matcher</a>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="https://newtothewallfoundation.com/#top" target="_blank" rel="noopener noreferrer" aria-label="New to the Wall Foundation — home">
+      <svg class="brand-mark" width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <path d="M6 33 C6 14, 20 28, 20 11 C20 28, 34 14, 34 33" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="brand-text">New&nbsp;to&nbsp;the&nbsp;Wall</span>
+    </a>
+    <div class="head-right">
+      <span class="head-tag">Upstate Art Weekend 2026</span>
+      <button data-theme-toggle aria-label="Switch to dark mode" class="theme-btn"></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero wrap">
+    <p class="eyebrow">A community tool · June 25–29, 2026</p>
+    <h1>Find your<br><em>Upstate Art Weekend.</em></h1>
+    <p class="lede">There are more than 160 galleries, project spaces, and museums across the Hudson Valley and Catskills this year — far too many to see in a weekend. Tell us what you love, and we'll pare the list down into a curated, tiered route made for you.</p>
+    <p class="hero-credit">Offered freely to the Hudson Valley art community by the <strong>New to the Wall Foundation</strong>.</p>
+  </section>
+
+  <!-- MATCHER -->
+  <section id="matcher" class="matcher wrap">
+    <div class="step-head">
+      <span class="step-num">01</span>
+      <h2>Tell us your taste</h2>
+    </div>
+
+    <form id="taste-form" novalidate>
+      <!-- Notable toggle -->
+      <fieldset class="field field--inline">
+        <legend>Any must-sees? <span class="hint">Optional</span></legend>
+        <div class="chips" role="group" aria-label="Must-see filter">
+          <button type="button" class="chip" id="notable-toggle" aria-pressed="false">&#9733; Notable / must-see only</button>
+        </div>
+      </fieldset>
+
+      <!-- Aesthetics -->
+      <fieldset class="field">
+        <legend>What kinds of art do you love? <span class="hint">Pick any that apply</span></legend>
+        <div class="chips" data-group="aesthetics" role="group" aria-label="Types of art"></div>
+      </fieldset>
+
+      <!-- Mediums -->
+      <fieldset class="field">
+        <legend>Which mediums draw you in? <span class="hint">Optional</span></legend>
+        <div class="chips" data-group="mediums" role="group" aria-label="Mediums"></div>
+      </fieldset>
+
+      <!-- Day of visit -->
+      <fieldset class="field field--inline">
+        <legend>Which day(s) are you going? <span class="hint">Optional — shows only open venues</span></legend>
+        <div class="chips" data-group="days" role="group" aria-label="Day of visit">
+          <button type="button" class="chip" data-group="days" data-val="Thursday">Thu &middot; June 25</button>
+          <button type="button" class="chip" data-group="days" data-val="Friday">Fri &middot; June 26</button>
+          <button type="button" class="chip" data-group="days" data-val="Saturday">Sat &middot; June 27</button>
+          <button type="button" class="chip" data-group="days" data-val="Sunday">Sun &middot; June 28</button>
+          <button type="button" class="chip" data-group="days" data-val="Monday">Mon &middot; June 29</button>
+        </div>
+      </fieldset>
+
+      <!-- Region -->
+      <fieldset class="field">
+        <legend>Where will you be roaming? <span class="hint">Optional — filter by area</span></legend>
+        <div class="chips" data-group="region" role="group" aria-label="Region"></div>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Build my list</button>
+        <button type="button" id="reset-btn" class="btn btn-ghost">Reset</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="results" class="results wrap" hidden>
+    <div class="step-head">
+      <span class="step-num">02</span>
+      <h2>Your curated route</h2>
+    </div>
+    <p id="results-summary" class="results-summary"></p>
+    <div id="results-actions" class="results-actions" hidden>
+      <button id="share-btn" class="btn btn-ghost">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        Share my list
+      </button>
+      <button id="csv-btn" class="btn btn-ghost">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download (CSV)
+      </button>
+    </div>
+    <!-- MAP -->
+    <div id="map-section" class="map-section" hidden>
+      <h3 class="map-heading">Your picks on the map</h3>
+      <div id="result-map"></div>
+    </div>
+
+    <div id="tiers"></div>
+
+    <p class="results-foot" id="results-foot">Matched against all UAW26 participants. This is a starting point — trust your own eye, and leave room to wander.</p>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-inner">
+    <div>
+      <svg width="28" height="28" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <path d="M6 33 C6 14, 20 28, 20 11 C20 28, 34 14, 34 33" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+      </svg>
+      <p class="foot-name">New to the Wall Foundation</p>
+    </div>
+    <p class="foot-note">A contemporary art collection &amp; foundation in the Hudson Valley. Gallery data from the Upstate Art Weekend 2026 participant guide. Made for the community &mdash; no logins, nothing tracked.</p>
+  </div>
+</footer>
+
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUP9bfQw5k-MpxNB3Nvqa48162MhBu6fU&callback=_onMapsReady&loading=async"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+(function () {
+  const t = document.querySelector('[data-theme-toggle]'), r = document.documentElement;
+  let d = 'light';
+  r.setAttribute('data-theme', d);
+  function paint(){ t.innerHTML = d==='dark'
+    ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+    : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>'; }
+  paint();
+  t.addEventListener('click', () => { d = d==='dark'?'light':'dark'; r.setAttribute('data-theme', d);
+    t.setAttribute('aria-label','Switch to '+(d==='dark'?'light':'dark')+' mode'); paint(); });
+})();
+</script>
+</body>
+</html>

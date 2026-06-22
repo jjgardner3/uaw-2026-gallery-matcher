@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>UAW 2026 · Reel Cards</title>
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=boska@400,500,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #2b2a26;
+    font-family: 'General Sans', sans-serif;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+  .label {
+    color: #908d80;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+  /* ── Card shell ── */
+  .card {
+    width: 540px;
+    height: 960px;
+    background: #f4efe4;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* dot texture from site */
+    background-image: radial-gradient(circle at 1px 1px, rgba(94,107,84,.06) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
+
+  /* ── Shared type ── */
+  .eyebrow {
+    font-family: 'General Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #5e6b54;
+  }
+  .display {
+    font-family: 'Boska', Georgia, serif;
+    font-weight: 500;
+    line-height: 1.05;
+    color: #2b2a26;
+  }
+  .body-text {
+    font-family: 'General Sans', sans-serif;
+    color: #5b594f;
+    line-height: 1.6;
+  }
+  .sage-line {
+    width: 48px;
+    height: 2px;
+    background: #5e6b54;
+    border-radius: 2px;
+  }
+  .brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #5e6b54;
+  }
+  .brand-mark svg { flex-shrink: 0; }
+  .brand-mark span {
+    font-family: 'Boska', Georgia, serif;
+    font-size: 15px;
+    color: #2b2a26;
+    letter-spacing: .02em;
+  }
+
+  /* Chip mockup */
+  .chips-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .chip-mock {
+    padding: 8px 18px;
+    border: 1.5px solid #c9bfa6;
+    border-radius: 9999px;
+    font-family: 'General Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #5b594f;
+    background: #fbf8f1;
+  }
+  .chip-mock.active {
+    background: #5e6b54;
+    color: #fbf8f1;
+    border-color: #5e6b54;
+  }
+  .region-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #908d80;
+    width: 100%;
+  }
+
+  /* ════════════════════════════════
+     CARD 1 — Hook
+  ════════════════════════════════ */
+  #card1 {
+    justify-content: space-between;
+    padding: 60px 52px 56px;
+  }
+  #card1 .top { display: flex; flex-direction: column; gap: 0; }
+  #card1 .mid { display: flex; flex-direction: column; gap: 20px; }
+  #card1 .h1 { font-size: 86px; }
+  #card1 .h1 em { font-style: italic; color: #5e6b54; }
+  #card1 .lede { font-size: 17px; max-width: 360px; }
+  #card1 .bottom { display: flex; flex-direction: column; gap: 14px; }
+
+  /* ════════════════════════════════
+     CARD 2 — The scale
+  ════════════════════════════════ */
+  #card2 {
+    justify-content: center;
+    padding: 72px 52px;
+    gap: 32px;
+  }
+  #card2 .big-num {
+    font-family: 'Boska', Georgia, serif;
+    font-size: 160px;
+    font-weight: 700;
+    color: #5e6b54;
+    line-height: 1;
+    letter-spacing: -.02em;
+  }
+  #card2 .mid-text { display: flex; flex-direction: column; gap: 16px; }
+  #card2 .h2 { font-size: 46px; }
+  #card2 .body-text { font-size: 19px; max-width: 380px; }
+
+  /* ════════════════════════════════
+     CARD 3 — The matcher
+  ════════════════════════════════ */
+  #card3 {
+    justify-content: space-between;
+    padding: 64px 52px 60px;
+  }
+  #card3 .top { display: flex; flex-direction: column; gap: 20px; }
+  #card3 .h2 { font-size: 52px; }
+  #card3 .h2 em { font-style: italic; color: #5e6b54; }
+  #card3 .chips-section { display: flex; flex-direction: column; gap: 22px; }
+  #card3 .section-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: #908d80;
+  }
+  #card3 .bottom { display: flex; flex-direction: column; gap: 14px; }
+  #card3 .tagline { font-size: 18px; font-weight: 500; color: #5e6b54; font-family: 'Boska', Georgia, serif; font-style: italic; }
+
+  /* ════════════════════════════════
+     CARD 4 — New feature
+  ════════════════════════════════ */
+  #card4 {
+    justify-content: space-between;
+    padding: 64px 52px 60px;
+  }
+  #card4 .new-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #5e6b54;
+    color: #f4efe4;
+    font-family: 'General Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 9999px;
+  }
+  #card4 .h2 { font-size: 58px; }
+  #card4 .h2 em { font-style: italic; color: #5e6b54; }
+  #card4 .sub { font-size: 19px; color: #5b594f; }
+  #card4 .town-chips { display: flex; flex-direction: column; gap: 18px; }
+  #card4 .bottom { display: flex; flex-direction: column; gap: 14px; }
+
+  /* ════════════════════════════════
+     CARD 5 — CTA
+  ════════════════════════════════ */
+  #card5 {
+    justify-content: space-between;
+    padding: 64px 52px 60px;
+    background-color: #5e6b54;
+    background-image: radial-gradient(circle at 1px 1px, rgba(244,239,228,.07) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
+  #card5 .eyebrow { color: rgba(244,239,228,.6); }
+  #card5 .h2 { font-size: 56px; color: #f4efe4; }
+  #card5 .url {
+    font-family: 'General Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #f4efe4;
+    word-break: break-all;
+    line-height: 1.5;
+  }
+  #card5 .dates {
+    font-family: 'Boska', Georgia, serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: rgba(244,239,228,.7);
+    font-style: italic;
+  }
+  #card5 .brand-mark span { color: #f4efe4; }
+  #card5 .brand-mark svg path { stroke: rgba(244,239,228,.8); }
+  #card5 .cta-note {
+    font-size: 14px;
+    color: rgba(244,239,228,.55);
+    letter-spacing: .04em;
+  }
+</style>
+</head>
+<body>
+
+<!-- ── CARD 1: Hook ── -->
+<p class="label">Card 1 of 5 — Hook</p>
+<div class="card" id="card1">
+  <div class="top">
+    <div class="brand-mark">
+      <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+        <path d="M6 33 C6 14, 20 28, 20 11 C20 28, 34 14, 34 33" stroke="#5e6b54" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span>New to the Wall</span>
+    </div>
+  </div>
+  <div class="mid">
+    <div class="eyebrow">A community tool · June 25–29, 2026</div>
+    <div class="display h1">Find your<br><em>Upstate Art Weekend.</em></div>
+  </div>
+  <div class="bottom">
+    <div class="sage-line"></div>
+    <p class="body-text lede">160+ galleries, project spaces, and museums — curated down to a route made for you.</p>
+  </div>
+</div>
+
+<!-- ── CARD 2: Scale ── -->
+<p class="label">Card 2 of 5 — The scale</p>
+<div class="card" id="card2">
+  <div class="eyebrow">Upstate Art Weekend 2026</div>
+  <div class="big-num">160+</div>
+  <div class="mid-text">
+    <div class="display h2">galleries,<br>project spaces,<br>museums.</div>
+    <p class="body-text" style="font-size:19px;">Spread across the Hudson Valley and Catskills. Far too many to see in a single weekend.</p>
+  </div>
+  <div class="sage-line"></div>
+</div>
+
+<!-- ── CARD 3: The matcher ── -->
+<p class="label">Card 3 of 5 — The matcher</p>
+<div class="card" id="card3">
+  <div class="top">
+    <div class="eyebrow">Free tool from New to the Wall</div>
+    <div class="display h2">Tell us what<br>you love —<br><em>we'll do<br>the rest.</em></div>
+  </div>
+  <div class="chips-section">
+    <div class="section-label">What kinds of art do you love?</div>
+    <div class="chips-row">
+      <div class="chip-mock active">Abstract</div>
+      <div class="chip-mock active">Photography</div>
+      <div class="chip-mock">Contemporary</div>
+      <div class="chip-mock">Landscape / nature</div>
+      <div class="chip-mock active">Conceptual</div>
+      <div class="chip-mock">Figurative</div>
+    </div>
+    <div class="section-label" style="margin-top:4px;">Which mediums draw you in?</div>
+    <div class="chips-row">
+      <div class="chip-mock active">Painting</div>
+      <div class="chip-mock active">Installation</div>
+      <div class="chip-mock">Sculpture</div>
+      <div class="chip-mock">Works on paper</div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="sage-line"></div>
+    <div class="tagline">Curated. Tiered. Free.</div>
+  </div>
+</div>
+
+<!-- ── CARD 4: New feature ── -->
+<p class="label">Card 4 of 5 — New feature</p>
+<div class="card" id="card4">
+  <div style="display:flex;flex-direction:column;gap:20px;">
+    <div class="new-badge">✦ New</div>
+    <div class="display h2">Now filter<br>by <em>town.</em></div>
+    <p class="sub">Not just by region — pick the exact towns you'll be in.</p>
+  </div>
+  <div class="town-chips">
+    <div class="region-label">Hudson &amp; Columbia</div>
+    <div class="chips-row">
+      <div class="chip-mock active">Hudson</div>
+      <div class="chip-mock">Chatham</div>
+      <div class="chip-mock">Kinderhook</div>
+      <div class="chip-mock">Ghent</div>
+    </div>
+    <div class="region-label" style="margin-top:8px;">Woodstock &amp; Western Catskills</div>
+    <div class="chips-row">
+      <div class="chip-mock active">Woodstock</div>
+      <div class="chip-mock active">Livingston Manor</div>
+      <div class="chip-mock">Windham</div>
+    </div>
+    <div class="region-label" style="margin-top:8px;">Kingston &amp; Ulster</div>
+    <div class="chips-row">
+      <div class="chip-mock">Kingston</div>
+      <div class="chip-mock active">High Falls</div>
+      <div class="chip-mock">New Paltz</div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="sage-line"></div>
+    <p class="body-text" style="font-size:16px;">Build the exact route you want.</p>
+  </div>
+</div>
+
+<!-- ── CARD 5: CTA ── -->
+<p class="label">Card 5 of 5 — CTA</p>
+<div class="card" id="card5">
+  <div class="brand-mark">
+    <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+      <path d="M6 33 C6 14, 20 28, 20 11 C20 28, 34 14, 34 33" stroke="rgba(244,239,228,.8)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    </svg>
+    <span>New to the Wall</span>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:24px;">
+    <div class="eyebrow">Free · No login · Made for the community</div>
+    <div class="display h2">Find your route<br>this weekend.</div>
+    <p class="url">uaw2026.newtothewallfoundation.com</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:10px;">
+    <div class="dates">June 25–29, 2026</div>
+    <p class="cta-note">Link in bio ↑</p>
+  </div>
+</div>
+
+</body>
+</html>
