@@ -487,6 +487,25 @@
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 
+  function downloadItineraryCsv(galleries) {
+    const header = ["Name", "Address", "Show / Exhibition", "Hours", "Website"];
+    const rows = [header, ...galleries.map(g => [
+      g.name,
+      g.address || g.location,
+      g.show || "",
+      (g.hours || []).join("; "),
+      g.website || ""
+    ])];
+    const csv = rows.map(r => r.map(c => `"${String(c).replace(/"/g,'""')}"`).join(",")).join("\n");
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url; a.download = "UAW2026-my-itinerary.csv";
+    document.body.appendChild(a); a.click();
+    document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+
   // ---- Run match ----
   const form = document.getElementById("taste-form");
   const resultsEl = document.getElementById("results");
@@ -575,7 +594,14 @@
     const shareBtn  = document.getElementById("share-btn");
     actionsEl.hidden = scored.length === 0;
     // re-bind each run so it always uses the latest results
-    csvBtn.onclick = () => downloadCsv(t1cap, t2cap, t3cap);
+    csvBtn.onclick = () => {
+      if (itinerary.size > 0) {
+        downloadItineraryCsv([...itinerary.values()]);
+      } else {
+        downloadCsv(t1cap, t2cap, t3cap);
+      }
+    };
+    csvBtn.title = itinerary.size > 0 ? 'Download your selected galleries' : 'Download all results';
     if (shareBtn) {
       shareBtn.onclick = () => {
         const url = buildShareUrl();
