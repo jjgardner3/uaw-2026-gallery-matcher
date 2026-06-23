@@ -3586,8 +3586,8 @@
   },
   {
     "name": "SEPTEMBER",
-    "location": "Beacon, NY",
-    "town": "Beacon",
+    "location": "Kinderhook, NY",
+    "town": "Kinderhook",
     "blurb": "Steadfast Study is a solo exhibition by Lukaza Branfman-Verissimo, artist, abolitionist, and storyteller, presenting text-based and message-driven bodies of work in their second solo gathering with the gallery.",
     "show": "Steadfast Study",
     "aesthetics": [
@@ -3603,18 +3603,18 @@
       "Lukaza Branfman-Verissimo"
     ],
     "notable": true,
-    "region": "Beacon & Cold Spring",
+    "region": "Hudson & Columbia",
     "hours": [
       "Thursday, June 25 | 11am-5pm",
       "Friday, June 26 | 11am-5pm",
       "Saturday, June 27 | 11am-5pm",
       "Sunday, June 28 | 11am-4pm"
     ],
-    "website": "https://www.instagram.com/septembergallery/",
+    "website": "http://septembergallery.com",
     "bloomberg_uuid": "c53b7d36-90d7-492b-94c9-fc4a2fa4466a",
-    "lat": 41.5048158,
-    "lng": -73.9695832,
-    "address": "320 Main Street, City of Beacon, New York 12508"
+    "lat": 42.3970,
+    "lng": -73.7032,
+    "address": null
   },
   {
     "name": "Shadow Walls",
