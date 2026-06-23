@@ -1165,35 +1165,6 @@
     "address": "Kingston Point Rail Trail, City of Kingston, New York 12574"
   },
   {
-    "name": "Contra Projects",
-    "location": "Hudson, NY",
-    "town": "Hudson",
-    "blurb": "Flames Of Setting Suns is a solo exhibition by Panamanian artist Iv\u00e1n Blasser, channeling the Pacific coast's incandescent horizon through raw iron forms \u2014 elemental and gestural.",
-    "show": "Flames Of Setting Suns",
-    "aesthetics": [
-      "contemporary",
-      "abstract"
-    ],
-    "mediums": [
-      "sculpture"
-    ],
-    "artists": [
-      "Iv\u00e1n Blasser"
-    ],
-    "notable": false,
-    "region": "Hudson & Columbia",
-    "hours": [
-      "Friday, June 26 | 12 PM - 4 PM",
-      "Saturday, June 27 | 12 PM - 3 PM",
-      "Sunday, June 28 | 12 PM - 4 PM"
-    ],
-    "website": "http://ruralprojects.org",
-    "bloomberg_uuid": "77a5f6a4-5b05-4b21-aefa-8eb10c4d2c39",
-    "lat": 42.2528649,
-    "lng": -73.790959,
-    "address": "306-308 Warren Street, City of Hudson, New York 12534"
-  },
-  {
     "name": "CPW",
     "location": "Woodstock, NY",
     "town": "Woodstock",
@@ -1502,8 +1473,8 @@
   },
   {
     "name": "Farm & Field",
-    "location": "Hudson Valley, NY",
-    "town": "Hudson Valley",
+    "location": "Chatham, NY",
+    "town": "Chatham",
     "blurb": "TRACING PATHS presents Jill Duffy's oil and cold wax paintings made directly from the land, inviting viewers to contemplate their relationship to place.",
     "show": "TRACING PATHS",
     "aesthetics": [
@@ -1518,18 +1489,18 @@
       "Jill Duffy"
     ],
     "notable": false,
-    "region": "Other / Multiple",
+    "region": "Hudson & Columbia",
     "hours": [
       "Thursday, June 25 | 11 am - 5pm",
       "Friday, June 26 | 11 am - 5pm",
       "Saturday, June 27 | 11 am - 5pm",
       "Sunday, June 28 | 11am - 3pm"
     ],
-    "website": "https://www.instagram.com/farmandfieldny/",
+    "website": "https://www.farmandfieldny.com/",
     "bloomberg_uuid": "22c9011f-604f-4030-83b4-a9dbdaf45ab3",
-    "lat": 42.7266791,
-    "lng": -73.6810318,
-    "address": "10 Farm Street, City of Troy, New York 12180"
+    "lat": 42.3651,
+    "lng": -73.5929,
+    "address": null
   },
   {
     "name": "Forged Hands",
